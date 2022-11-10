@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - ShowOnPause
+  - RedBars
+  - OrangeBars
+  - GreenBars
+  - YellowBars
   layers:
   - Default
   - TransparentFX

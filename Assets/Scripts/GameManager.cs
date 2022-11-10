@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText;
     
     public int lives;
-    public int scoreValue;
 
     public bool isPuckOnWinWall;
     
