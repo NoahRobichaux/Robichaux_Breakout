@@ -8,10 +8,21 @@ public class GameManager : MonoBehaviour
 {
     public TMP_Text livesText;
     public TMP_Text scoreText;
+    
     public int lives;
     public int scoreValue;
+
+    public bool isPuckOnWinWall;
     
-    public string levelName;
+    public string nextLevel;
+
+    public float delay;
+    public bool isTimeUp;
+
+    public GameObject winText;
+    public GameObject loseText;
+
+    public GameObject barContent;
 
 
     void Start()
@@ -22,6 +33,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPuckOnWinWall)
+        {
+            if (barContent)
+            {
+                if (delay > 0)
+                {
+                    winText.SetActive(true);
+                    delay -= Time.deltaTime;
+                }
+                if (delay <= 0)
+                {
+                    isTimeUp = true;
+                }
+                if (isTimeUp)
+                {
+                    SceneManager.LoadScene(nextLevel);
+                }
+            }
+        }
     }
 }

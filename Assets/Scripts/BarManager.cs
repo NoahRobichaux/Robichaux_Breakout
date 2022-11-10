@@ -22,5 +22,6 @@ public class BarManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameManagerScript.scoreText.SetText("" + gameManagerScript.scoreValue);
+        Destroy(gameObject);
     }
 }
