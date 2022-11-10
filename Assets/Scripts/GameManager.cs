@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     public float delay;
     public bool isTimeUp;
 
+    public bool isPlayerDead;
+
     public GameObject winText;
     public GameObject loseText;
+    public GameObject startText;
 
     public GameObject barContent;
 
@@ -28,29 +31,52 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         livesText.SetText("Lives: " + lives);
+        startText.SetActive(true);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            startText.SetActive(false);
+            Time.timeScale = 1;
+        }
+        
         if (isPuckOnWinWall)
         {
-            if (barContent)
+            if (delay > 0)
             {
-                if (delay > 0)
+                winText.SetActive(true);
+                delay -= Time.deltaTime;
+            }
+            if (delay <= 0)
+            {
+                isTimeUp = true;
+            }
+            if (isTimeUp)
+            {
+                SceneManager.LoadScene(nextLevel);
+            }
+        }
+        if (isPlayerDead)
+        {
+            lives = lives - 1;
+            livesText.SetText("Lives: " + lives);
+            if (lives < 3)
+            {
+                Time.timeScale = 0;
+                startText.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    winText.SetActive(true);
-                    delay -= Time.deltaTime;
-                }
-                if (delay <= 0)
-                {
-                    isTimeUp = true;
-                }
-                if (isTimeUp)
-                {
-                    SceneManager.LoadScene(nextLevel);
+                    Time.timeScale = 1;
                 }
             }
+        }
+        if (lives <= 0)
+        {
+            loseText.SetActive(true);
         }
     }
 }
