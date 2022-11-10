@@ -7,32 +7,6 @@ public class UIManager : MonoBehaviour
 {
     GameObject[] pauseObjects;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Time.timeScale = 1;
-        pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        hidePaused();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-                showPaused();
-            }
-            else if (Time.timeScale == 0)
-            {
-                Time.timeScale = 1;
-                hidePaused();
-            }
-        }
-    }
-
     public void Reload(string level)
     {
         SceneManager.LoadScene(level);
@@ -67,9 +41,35 @@ public class UIManager : MonoBehaviour
             g.SetActive(false);
         }
     }
-    
+
     public void LoadLevel(string level)
     {
         SceneManager.LoadScene(level);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Time.timeScale = 1;
+        pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        hidePaused();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                showPaused();
+            }
+            else if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                hidePaused();
+            }
+        }
     }
 }

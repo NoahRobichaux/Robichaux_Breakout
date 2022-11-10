@@ -6,6 +6,7 @@ public class Puck : MonoBehaviour
 {
     private Rigidbody2D puckRB;
     private Vector2 puckDirection;
+    public GameObject puck;
     
     void Start()
     {
