@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     public bool isPlayerDead;
 
+    public AudioSource barBreak;
+    public AudioSource lostLife;
+    public AudioSource gameOver;
+
     public GameObject winText;
     public GameObject loseText;
     public GameObject startText;
@@ -50,7 +54,7 @@ public class GameManager : MonoBehaviour
                 winText.SetActive(true);
                 delay -= Time.deltaTime;
             }
-            if (delay <= 0)
+            else if (delay <= 0)
             {
                 isTimeUp = true;
             }
