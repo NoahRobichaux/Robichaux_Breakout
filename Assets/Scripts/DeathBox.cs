@@ -11,11 +11,11 @@ public class DeathBox : MonoBehaviour
         if (gameManagerScript.lives <= 3)
         {
             gameManagerScript.lostLife.Play();
+            collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
         }
         else if (gameManagerScript.lives == 0)
         {
             gameManagerScript.gameOver.Play();
         }  
-        collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
     }
 }

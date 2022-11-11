@@ -15,14 +15,28 @@ public class GameManager : MonoBehaviour
     
     public string nextLevel;
 
-    public float delay;
-    public bool isTimeUp;
+    public string mainMenuScene;
+
+    public float loadLevelDelay = 5;
+
+    public float loadMainMenuDelay = 3;
 
     public bool isPlayerDead;
 
     public AudioSource barBreak;
+    public GameObject barBreakObject;
+
     public AudioSource lostLife;
+    public GameObject lostLifeObject;
+
     public AudioSource gameOver;
+    public GameObject gameOverObject;
+
+    public AudioSource gameWin;
+    public GameObject gameWinObject;
+
+    public AudioSource bGM;
+    public GameObject bGMGameObject;
 
     public GameObject winText;
     public GameObject loseText;
@@ -46,27 +60,32 @@ public class GameManager : MonoBehaviour
             startText.SetActive(false);
             Time.timeScale = 1;
         }
-        
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            bGMGameObject.SetActive(true);
+            bGM.Play();
+        }
         if (isPuckOnWinWall)
         {
-            if (delay > 0)
+            if (loadLevelDelay > 0)
             {
                 winText.SetActive(true);
-                delay -= Time.deltaTime;
+                gameWinObject.SetActive(true);
+                gameWin.Play();
+                loadLevelDelay -= Time.deltaTime;
             }
-            else if (delay <= 0)
-            {
-                isTimeUp = true;
-            }
-            if (isTimeUp)
+            if (loadLevelDelay <= 0)
             {
                 SceneManager.LoadScene(nextLevel);
             }
+
         }
         if (isPlayerDead)
         {
             lives = lives - 1;
             livesText.SetText("Lives: " + lives);
+            lostLifeObject.SetActive(true);
+            lostLife.Play();
             if (lives < 3)
             {
                 Time.timeScale = 0;
@@ -80,6 +99,17 @@ public class GameManager : MonoBehaviour
         if (lives <= 0)
         {
             loseText.SetActive(true);
+            gameOverObject.SetActive(true);
+            gameOver.Play();
+            
+            if (loadMainMenuDelay > 0)
+            {
+                loadMainMenuDelay -= Time.deltaTime;
+            }
+            if (loadMainMenuDelay <= 0)
+            {
+                SceneManager.LoadScene(mainMenuScene);
+            }
         }
     }
 }

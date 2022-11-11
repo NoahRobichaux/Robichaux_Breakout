@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (12)
@@ -212,30 +216,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (14)
@@ -326,30 +310,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (8)
@@ -440,30 +404,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (3)
@@ -538,6 +482,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (5)
@@ -604,6 +552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (15)
@@ -754,6 +706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (8)
@@ -820,6 +776,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (10)
@@ -886,6 +846,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (5)
@@ -945,6 +909,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6577151630221530475, guid: 49acc3101557063439bbe28199167643, type: 3}
   m_PrefabInstance: {fileID: 157232485}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &181280026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181280028}
+  - component: {fileID: 181280027}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!82 &181280027
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181280026}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1c64bd3a6ecc5c4409e8aa874c7315bf, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &181280028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181280026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &192587230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,30 +1060,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (11)
@@ -1066,6 +1138,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (3)
@@ -1148,30 +1224,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (1)
@@ -1246,6 +1302,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (15)
@@ -1328,30 +1388,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (10)
@@ -1426,6 +1466,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (15)
@@ -1704,7 +1748,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &345167469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puck: {fileID: 345167465}
+  isInSpace: 0
 --- !u!58 &345167470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1741,6 +1786,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (5)
@@ -1807,6 +1856,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (6)
@@ -1889,30 +1942,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (13)
@@ -1987,6 +2020,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (8)
@@ -2204,30 +2241,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar
@@ -2302,6 +2319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (3)
@@ -2368,6 +2389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (7)
@@ -2434,6 +2459,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (4)
@@ -2500,6 +2529,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (9)
@@ -2566,6 +2599,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (9)
@@ -2632,6 +2669,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (6)
@@ -2725,12 +2766,20 @@ MonoBehaviour:
   lives: 3
   isPuckOnWinWall: 0
   nextLevel: LevelTwo
-  delay: 5
-  isTimeUp: 0
+  mainMenuScene: MainMenu
+  loadLevelDelay: 5
+  loadMainMenuDelay: 3
   isPlayerDead: 0
   barBreak: {fileID: 1843947341}
+  barBreakObject: {fileID: 1843947339}
   lostLife: {fileID: 1028091376}
+  lostLifeObject: {fileID: 1028091375}
   gameOver: {fileID: 1279942912}
+  gameOverObject: {fileID: 1279942910}
+  gameWin: {fileID: 0}
+  gameWinObject: {fileID: 0}
+  bGM: {fileID: 181280027}
+  bGMGameObject: {fileID: 181280026}
   winText: {fileID: 1448912508}
   loseText: {fileID: 1811574776}
   startText: {fileID: 442740261}
@@ -2748,7 +2797,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &727412858
 PrefabInstance:
@@ -2773,30 +2822,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (15)
@@ -2930,7 +2959,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &750751355
 PrefabInstance:
@@ -2939,6 +2968,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar
@@ -3130,30 +3163,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (2)
@@ -3326,6 +3339,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (10)
@@ -3577,30 +3594,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (4)
@@ -3675,6 +3672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar
@@ -3910,6 +3911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (13)
@@ -3976,6 +3981,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar
@@ -4186,7 +4195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1028091376
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4321,30 +4330,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (6)
@@ -4419,6 +4408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (2)
@@ -4485,6 +4478,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (7)
@@ -4551,6 +4548,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (2)
@@ -4887,6 +4888,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (3)
@@ -4957,6 +4962,7 @@ GameObject:
   - component: {fileID: 1201304501}
   - component: {fileID: 1201304500}
   - component: {fileID: 1201304499}
+  - component: {fileID: 1201304502}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: Untagged
@@ -5057,6 +5063,27 @@ Transform:
   m_Father: {fileID: 1955446657}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1201304502
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201304498}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1209673245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,7 +5095,6 @@ GameObject:
   - component: {fileID: 1209673247}
   - component: {fileID: 1209673246}
   - component: {fileID: 1209673248}
-  - component: {fileID: 1209673252}
   - component: {fileID: 1209673250}
   - component: {fileID: 1209673251}
   m_Layer: 0
@@ -5138,7 +5164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209673245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: -4.5, z: 0}
+  m_LocalPosition: {x: 0, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5197,33 +5223,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0037243376, y: -0.0037239194}
   m_Size: {x: 1.7489724, y: 0.3426278}
   m_Direction: 1
---- !u!114 &1209673252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209673245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  livesText: {fileID: 0}
-  scoreText: {fileID: 0}
-  lives: 0
-  isPuckOnWinWall: 0
-  nextLevel: 
-  delay: 0
-  isTimeUp: 0
-  isPlayerDead: 0
-  barBreak: {fileID: 0}
-  lostLife: {fileID: 0}
-  gameOver: {fileID: 0}
-  winText: {fileID: 0}
-  loseText: {fileID: 0}
-  startText: {fileID: 0}
-  barContent: {fileID: 0}
 --- !u!1 &1240191586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5388,6 +5387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (9)
@@ -5623,6 +5626,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (1)
@@ -5698,7 +5705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1279942911
 Transform:
   m_ObjectHideFlags: 0
@@ -5724,7 +5731,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 832aa39d4fbe053428a67083bb091a1a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5817,6 +5824,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (1)
@@ -6043,7 +6054,7 @@ Transform:
   - {fileID: 1028091377}
   - {fileID: 1843947340}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1448170512
 PrefabInstance:
@@ -6052,6 +6063,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (13)
@@ -6253,6 +6268,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (6)
@@ -6319,6 +6338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (8)
@@ -6385,6 +6408,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (14)
@@ -6681,6 +6708,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (13)
@@ -6824,7 +6855,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1571914468
 MonoBehaviour:
@@ -6872,6 +6903,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (14)
@@ -6954,30 +6989,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (5)
@@ -7141,7 +7156,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1656308816
 GameObject:
@@ -7185,7 +7200,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1702992895
 PrefabInstance:
@@ -7194,6 +7209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (7)
@@ -7260,6 +7279,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (12)
@@ -7326,6 +7349,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (4)
@@ -7536,7 +7563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1843947340
 Transform:
   m_ObjectHideFlags: 0
@@ -7562,7 +7589,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 24d73765699ce3e46bb23cabc3a46494, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7655,6 +7682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (2)
@@ -7721,6 +7752,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (12)
@@ -7922,6 +7957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (11)
@@ -7992,6 +8031,7 @@ GameObject:
   - component: {fileID: 1930818760}
   - component: {fileID: 1930818759}
   - component: {fileID: 1930818758}
+  - component: {fileID: 1930818761}
   m_Layer: 0
   m_Name: WallRight
   m_TagString: Untagged
@@ -8092,6 +8132,27 @@ Transform:
   m_Father: {fileID: 1955446657}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1930818761
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930818757}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1955446656
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,6 +8193,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (4)
@@ -8214,30 +8279,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (7)
@@ -8312,6 +8357,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (1)
@@ -8394,30 +8443,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (9)
@@ -8492,6 +8521,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 49acc3101557063439bbe28199167643, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 49acc3101557063439bbe28199167643, type: 3}
       propertyPath: m_Name
       value: OrangeBar (11)
@@ -8574,30 +8607,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.011787569
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: winText
-      value: 
-      objectReference: {fileID: 1448912508}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: loseText
-      value: 
-      objectReference: {fileID: 1811574776}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: livesText
-      value: 
-      objectReference: {fileID: 1514370443}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: nextLevel
-      value: 
+    - target: {fileID: -478802459197804989, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1913012789}
-    - target: {fileID: 677057868765792711, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
-      propertyPath: barContent
-      value: 
-      objectReference: {fileID: 1520401634}
     - target: {fileID: 2524520474279656826, guid: 9c1d0ae8ed8633949b4cd56639f66e21, type: 3}
       propertyPath: m_Name
       value: RedBar (12)
@@ -8672,6 +8685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (14)
@@ -8827,7 +8844,7 @@ RectTransform:
   - {fileID: 1811574777}
   - {fileID: 442740264}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8846,6 +8863,7 @@ GameObject:
   - component: {fileID: 2128374426}
   - component: {fileID: 2128374425}
   - component: {fileID: 2128374424}
+  - component: {fileID: 2128374427}
   - component: {fileID: 2128374423}
   m_Layer: 5
   m_Name: PauseButton
@@ -8917,8 +8935,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.5007565, g: 0.79835105, b: 0.8773585, a: 1}
-    m_PressedColor: {r: 0.15218939, g: 0.47921643, b: 0.5660378, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -8938,7 +8956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2128374425}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2128374427}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: showPaused
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2128374425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8977,6 +9007,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128374421}
   m_CullTransparentMesh: 1
+--- !u!114 &2128374427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128374421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfab869a525b3c246ad70dffbf08e14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2129924763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8984,6 +9026,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 935a7472958da3f458577710b4a2dd0e, type: 3}
       propertyPath: m_Name
       value: GreenBar (11)
@@ -9050,6 +9096,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1520401635}
     m_Modifications:
+    - target: {fileID: -478802459197804989, guid: 5009cf09702e1634dad0897031911d03, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2524520474279656826, guid: 5009cf09702e1634dad0897031911d03, type: 3}
       propertyPath: m_Name
       value: YellowBar (10)
