@@ -19,7 +19,7 @@ public class Puck : MonoBehaviour
     }
     void Update()
     {
-        if (true)
+        if (isInSpace == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -41,6 +41,10 @@ public class Puck : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
+        {
+            isInSpace = true;
+        }
+        if (collision.gameObject.tag == "Wall")
         {
             isInSpace = true;
         }

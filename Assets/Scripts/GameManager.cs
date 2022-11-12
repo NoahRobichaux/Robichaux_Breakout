@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
 
     public string mainMenuScene;
 
-    public float loadLevelDelay = 5;
+    public float loadLevelDelay = 5.0f;
 
-    public float loadMainMenuDelay = 3;
+    public float loadMainMenuDelay = 3.0f;
 
     public bool isPlayerDead;
 
@@ -60,10 +60,9 @@ public class GameManager : MonoBehaviour
             startText.SetActive(false);
             Time.timeScale = 1;
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             bGMGameObject.SetActive(true);
-            bGM.Play();
         }
         if (isPuckOnWinWall)
         {
@@ -71,7 +70,6 @@ public class GameManager : MonoBehaviour
             {
                 winText.SetActive(true);
                 gameWinObject.SetActive(true);
-                gameWin.Play();
                 loadLevelDelay -= Time.deltaTime;
             }
             if (loadLevelDelay <= 0)
@@ -85,7 +83,6 @@ public class GameManager : MonoBehaviour
             lives = lives - 1;
             livesText.SetText("Lives: " + lives);
             lostLifeObject.SetActive(true);
-            lostLife.Play();
             if (lives < 3)
             {
                 Time.timeScale = 0;
@@ -100,7 +97,6 @@ public class GameManager : MonoBehaviour
         {
             loseText.SetActive(true);
             gameOverObject.SetActive(true);
-            gameOver.Play();
             
             if (loadMainMenuDelay > 0)
             {

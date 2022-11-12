@@ -9,6 +9,7 @@ TagManager:
   - OrangeBars
   - GreenBars
   - YellowBars
+  - Wall
   layers:
   - Default
   - TransparentFX
