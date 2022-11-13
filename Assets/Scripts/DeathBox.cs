@@ -10,12 +10,12 @@ public class DeathBox : MonoBehaviour
         gameManagerScript.isPlayerDead = true;
         if (gameManagerScript.lives <= 3)
         {
-            gameManagerScript.lostLife.Play();
+            gameManagerScript.lostLifeObject.SetActive(true);
             collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
         }
         else if (gameManagerScript.lives == 0)
         {
-            gameManagerScript.gameOver.Play();
+            gameManagerScript.gameOverObject.SetActive(true);
         }  
     }
 }
