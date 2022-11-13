@@ -1656,7 +1656,7 @@ GameObject:
   - component: {fileID: 345167470}
   m_Layer: 0
   m_Name: Puck
-  m_TagString: Untagged
+  m_TagString: Puck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puck: {fileID: 345167465}
+  gameManagerScript: {fileID: 0}
   isInSpace: 0
 --- !u!58 &345167470
 CircleCollider2D:

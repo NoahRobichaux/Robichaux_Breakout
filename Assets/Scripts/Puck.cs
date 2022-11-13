@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Puck : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Puck : MonoBehaviour
     private Vector2 puckDirection;
     public GameObject puck;
     private RigidbodyType2D rbt;
+    
+    public GameManager gameManagerScript;
 
     public bool isInSpace;
 
