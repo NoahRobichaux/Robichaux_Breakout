@@ -13,7 +13,7 @@ public class DeathBox : MonoBehaviour
             gameManagerScript.lostLifeObject.SetActive(true);
             collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
         }
-        else if (gameManagerScript.lives == 0)
+        if (gameManagerScript.lives == 0)
         {
             gameManagerScript.gameOverObject.SetActive(true);
         }  

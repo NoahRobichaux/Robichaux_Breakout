@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead)
         {
-            lives = lives - 1;
+            lives -= lives -2;
             livesText.SetText("Lives: " + lives);
             lostLifeObject.SetActive(true);
             if (lives < 3)
