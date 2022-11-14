@@ -18,8 +18,8 @@ public class Puck : MonoBehaviour
 
     public bool isInSpace;
 
-    public bool hasBrokenOrange = false;
-    public bool hasBrokenRed = false;
+    private bool hasBrokenOrange = false;
+    private bool hasBrokenRed = false;
 
     public float speed;
 

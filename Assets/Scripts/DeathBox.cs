@@ -12,7 +12,7 @@ public class DeathBox : MonoBehaviour
         gameManagerScript.isPlayerDead = true;
         if (gameManagerScript.lives <= 3)
         {
-            if (collision.gameObject.tag == "Puck")
+            if (collision.gameObject.name == "Puck")
             {
                 gameManagerScript.lostLifeObject.SetActive(true);
                 collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
