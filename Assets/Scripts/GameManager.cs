@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText;
     
     public int lives;
+    public int score;
+    public int maxScore;
 
     public bool isPuckOnWinWall;
     
@@ -17,9 +20,9 @@ public class GameManager : MonoBehaviour
 
     public string mainMenuScene;
 
-    public float loadLevelDelay = 5.0f;
+    public float loadLevelDelay;
 
-    public float loadMainMenuDelay = 3.0f;
+    public float loadMainMenuDelay;
 
     public bool isPlayerDead;
 
@@ -44,21 +47,25 @@ public class GameManager : MonoBehaviour
 
     public GameObject barContent;
 
+    private GameObject playerBar;
+
 
     void Start()
     {
         livesText.SetText("Lives: " + lives);
         startText.SetActive(true);
-        Time.timeScale = 0;
+        loadLevelDelay = 5.0f;
+        loadMainMenuDelay = 3.0f;
+        playerBar = GameObject.FindGameObjectWithTag("Player");
+        score = 0;
+        scoreText.SetText("0" + score);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startText.SetActive(false);
-            Time.timeScale = 1;
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -66,7 +73,7 @@ public class GameManager : MonoBehaviour
         }
         if (isPuckOnWinWall)
         {
-            if (loadLevelDelay > 0)
+            if (loadLevelDelay > 0 && lives > 0 && score == maxScore)
             {
                 winText.SetActive(true);
                 gameWinObject.SetActive(true);
@@ -76,7 +83,10 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene(nextLevel);
             }
-
+            if (score < maxScore)
+            {
+                playerBar.GetComponent<Transform>().localScale = new Vector3(0.5f, 1, 1);
+            }
         }
         if (isPlayerDead)
         {
