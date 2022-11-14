@@ -54,4 +54,21 @@ public class Puck : MonoBehaviour
             isInSpace = true;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            float x = Random.Range(-10f, 10f);
+            float y = 10f;
+            puckDirection = new Vector2(x, y);
+            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            float x = Random.Range(-10f, 10f);
+            float y = 10f;
+            puckDirection = new Vector2(x, y);
+            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+        }
+    }
 }
