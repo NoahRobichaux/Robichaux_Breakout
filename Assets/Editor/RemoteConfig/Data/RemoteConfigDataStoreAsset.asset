@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rsKeyList: '[]'
   _rsLastCachedKeyList: '[]'
-  _environments: '[]'
+  _environments: "[\r\n  {\r\n    \"projectId\": \"21f14795-dba9-4f57-a270-08ac518dbe43\",\r\n   
+    \"name\": \"remote\",\r\n    \"id\": \"011e2641-4567-4154-8382-db30abfbe7fc\",\r\n   
+    \"isDefault\": false,\r\n    \"createdAt\": \"2022-11-07T17:11:30Z\",\r\n   
+    \"updatedAt\": \"2022-11-07T17:11:30Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"21f14795-dba9-4f57-a270-08ac518dbe43\",\r\n    \"name\": \"production\",\r\n   
+    \"id\": \"0267f830-d0a2-4d89-92ec-48ed6764c8d7\",\r\n    \"isDefault\": true,\r\n   
+    \"createdAt\": \"2022-11-07T16:36:27Z\",\r\n    \"updatedAt\": \"2022-11-07T16:36:27Z\"\r\n 
+    }\r\n]"

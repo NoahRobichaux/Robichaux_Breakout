@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 181280027}
   m_Layer: 0
   m_Name: BGM
-  m_TagString: Untagged
+  m_TagString: BGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1839,6 +1839,9 @@ MonoBehaviour:
   puck: {fileID: 345167465}
   gameManagerScript: {fileID: 725003280}
   isInSpace: 0
+  hasBrokenOrange: 0
+  hasBrokenRed: 0
+  speed: 0
 --- !u!58 &345167470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2192,7 +2195,7 @@ GameObject:
   - component: {fileID: 442740262}
   m_Layer: 5
   m_Name: Start Text
-  m_TagString: Untagged
+  m_TagString: StartText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2895,6 +2898,10 @@ MonoBehaviour:
   livesText: {fileID: 1514370443}
   scoreText: {fileID: 1913012789}
   lives: 3
+  score: 0
+  maxScore: 0
+  highScore: 0
+  barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: LevelTwo
   mainMenuScene: MainMenu
@@ -2903,7 +2910,7 @@ MonoBehaviour:
   isPlayerDead: 0
   barBreak: {fileID: 1843947341}
   barBreakObject: {fileID: 1843947339}
-  lostLife: {fileID: 1028091376}
+  lostLife: {fileID: 0}
   lostLifeObject: {fileID: 1028091375}
   gameOver: {fileID: 1279942912}
   gameOverObject: {fileID: 1279942910}
@@ -2915,6 +2922,7 @@ MonoBehaviour:
   loseText: {fileID: 1811574776}
   startText: {fileID: 442740261}
   barContent: {fileID: 1520401634}
+  playerBar: {fileID: 1209673245}
 --- !u!4 &725003281
 Transform:
   m_ObjectHideFlags: 0
@@ -4362,7 +4370,7 @@ GameObject:
   - component: {fileID: 1028091376}
   m_Layer: 0
   m_Name: DeathSFX
-  m_TagString: Untagged
+  m_TagString: LostLife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5907,7 +5915,7 @@ GameObject:
   - component: {fileID: 1279942912}
   m_Layer: 0
   m_Name: GameOverSFX
-  m_TagString: Untagged
+  m_TagString: GameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6355,7 +6363,7 @@ GameObject:
   - component: {fileID: 1448912510}
   m_Layer: 5
   m_Name: WinText
-  m_TagString: Untagged
+  m_TagString: WinText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6848,7 +6856,7 @@ GameObject:
   - component: {fileID: 1520401635}
   m_Layer: 0
   m_Name: BarContent
-  m_TagString: Untagged
+  m_TagString: BarContent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7708,7 +7716,7 @@ GameObject:
   - component: {fileID: 1811574778}
   m_Layer: 5
   m_Name: LoseText
-  m_TagString: Untagged
+  m_TagString: LoseText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7842,7 +7850,7 @@ GameObject:
   - component: {fileID: 1843947341}
   m_Layer: 0
   m_Name: BarBreakSFX
-  m_TagString: Untagged
+  m_TagString: BarBreak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7854,7 +7862,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843947339}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -11,6 +11,14 @@ TagManager:
   - YellowBars
   - Wall
   - Puck
+  - BarBreak
+  - LostLife
+  - GameOver
+  - BGM
+  - BarContent
+  - WinText
+  - LoseText
+  - StartText
   layers:
   - Default
   - TransparentFX

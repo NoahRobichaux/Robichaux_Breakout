@@ -18,11 +18,18 @@ public class Puck : MonoBehaviour
 
     public bool isInSpace;
 
+    public bool hasBrokenOrange = false;
+    public bool hasBrokenRed = false;
+
+    public float speed;
+
     void Start()
     {
         puckRB = GetComponent<Rigidbody2D>();
         puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         isInSpace= true;
+
+        speed = 1;
 
         redBars = GameObject.FindGameObjectsWithTag("RedBars");
         orangeBars = GameObject.FindGameObjectsWithTag("OrangeBars");
@@ -57,6 +64,22 @@ public class Puck : MonoBehaviour
             {
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
+        }
+        if (gameManagerScript.barsBroken >= 4 && gameManagerScript.score < gameManagerScript.maxScore)
+        {
+            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+        }
+        if (gameManagerScript.barsBroken >= 12 && gameManagerScript.score < gameManagerScript.maxScore)
+        {
+            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+        }
+        if (hasBrokenOrange && gameManagerScript.score < gameManagerScript.maxScore)
+        {
+            puckRB.AddForce(new Vector2(speed+ 0.25f, 0), ForceMode2D.Force);
+        }
+        if (hasBrokenRed && gameManagerScript.score < gameManagerScript.maxScore)
+        {
+            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -104,6 +127,8 @@ public class Puck : MonoBehaviour
         {
             gameManagerScript.score = gameManagerScript.score + 7;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            hasBrokenRed = true;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
@@ -114,6 +139,8 @@ public class Puck : MonoBehaviour
         {
             gameManagerScript.score = gameManagerScript.score + 5;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            hasBrokenOrange= true;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
@@ -124,6 +151,7 @@ public class Puck : MonoBehaviour
         {
             gameManagerScript.score = gameManagerScript.score + 3;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
@@ -134,6 +162,7 @@ public class Puck : MonoBehaviour
         {
             gameManagerScript.score = gameManagerScript.score + 1;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);

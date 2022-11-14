@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public int lives;
     public int score;
     public int maxScore;
+    
+    public int highScore;
+
+    public int barsBroken;
 
     public bool isPuckOnWinWall;
     
@@ -47,7 +51,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject barContent;
 
-    private GameObject playerBar;
+    public GameObject playerBar;
 
 
     void Start()
@@ -56,8 +60,8 @@ public class GameManager : MonoBehaviour
         startText.SetActive(true);
         loadLevelDelay = 5.0f;
         loadMainMenuDelay = 3.0f;
-        playerBar = GameObject.FindGameObjectWithTag("Player");
         score = 0;
+        barsBroken = 0;
         scoreText.SetText("0" + score);
     }
 
