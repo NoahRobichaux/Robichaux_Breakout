@@ -8,7 +8,6 @@ public class Puck : MonoBehaviour
     private Rigidbody2D puckRB;
     private Vector2 puckDirection;
     public GameObject puck;
-    private RigidbodyType2D rbt;
     
     public GameManager gameManagerScript;
 
@@ -17,7 +16,7 @@ public class Puck : MonoBehaviour
     void Start()
     {
         puckRB = GetComponent<Rigidbody2D>();
-        rbt = RigidbodyType2D.Static;
+        puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
     }
     void Update()
     {
@@ -25,11 +24,15 @@ public class Puck : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rbt = RigidbodyType2D.Dynamic;
+                puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 float x = Random.Range(-10f, 10f);
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            }
+            if (puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && Time.timeScale == 1 && gameManagerScript.isPlayerDead == false)
+            {
+                puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             }
         }
     }

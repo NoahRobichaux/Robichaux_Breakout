@@ -1762,7 +1762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puck: {fileID: 345167465}
-  gameManagerScript: {fileID: 0}
+  gameManagerScript: {fileID: 725003280}
   isInSpace: 0
 --- !u!58 &345167470
 CircleCollider2D:
@@ -6872,6 +6872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 725003280}
+  puck: {fileID: 345167465}
 --- !u!61 &1571914469
 BoxCollider2D:
   m_ObjectHideFlags: 0

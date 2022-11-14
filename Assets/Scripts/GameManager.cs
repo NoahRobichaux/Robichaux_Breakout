@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             lives -= lives -2;
             livesText.SetText("Lives: " + lives);
             lostLifeObject.SetActive(true);
-            if (lives < 3)
+            if (lives < 3 && lives > 0)
             {
                 Time.timeScale = 0;
                 startText.SetActive(true);
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        if (lives <= 0)
+        if (lives == 0)
         {
             loseText.SetActive(true);
             gameOverObject.SetActive(true);
