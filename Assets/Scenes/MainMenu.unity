@@ -709,7 +709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: No Highscore
+  m_text: No High Score
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e433cb4ee06651647b232147f4445073, type: 2}
   m_sharedMaterial: {fileID: 6759744680345126366, guid: e433cb4ee06651647b232147f4445073, type: 2}
@@ -1119,6 +1119,7 @@ MonoBehaviour:
   loseText: {fileID: 0}
   startText: {fileID: 0}
   barContent: {fileID: 0}
+  playerBar: {fileID: 0}
 --- !u!4 &1370832477
 Transform:
   m_ObjectHideFlags: 0
