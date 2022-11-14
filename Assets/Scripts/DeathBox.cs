@@ -9,13 +9,13 @@ public class DeathBox : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManagerScript.isPlayerDead = true;
         if (gameManagerScript.lives <= 3)
         {
             if (collision.gameObject.name == "Puck")
             {
+                gameManagerScript.isPlayerDead = true;
                 gameManagerScript.lostLifeObject.SetActive(true);
-                collision.gameObject.GetComponent<Transform>().localPosition = Vector2.zero;
+                collision.gameObject.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
                 collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
         }

@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
 // Update is called once per frame
     void Update()
     {
-       
         if (Input.GetKey(KeyCode.D))
         {
             playerRigidbody2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);

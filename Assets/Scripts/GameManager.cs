@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +28,8 @@ public class GameManager : MonoBehaviour
     public float loadMainMenuDelay;
 
     public bool isPlayerDead;
+
+    public Puck puckScript;
 
     public AudioSource barBreak;
     public GameObject barBreakObject;
@@ -70,9 +71,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startText.SetActive(false);
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
             bGMGameObject.SetActive(true);
         }
         if (isPuckOnWinWall)
@@ -94,16 +92,14 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead)
         {
-            lives -= lives -2;
+            lives -= -lives + 1;
             livesText.SetText("Lives: " + lives);
             lostLifeObject.SetActive(true);
             if (lives < 3 && lives > 0)
             {
-                Time.timeScale = 0;
                 startText.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Time.timeScale = 1;
                     isPlayerDead = false;
                 }
             }

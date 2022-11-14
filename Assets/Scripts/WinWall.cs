@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class WinWall : MonoBehaviour
 {
-
+    public GameObject winWall;
     public GameManager gameManagerScript;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameManagerScript.isPuckOnWinWall = true;
+        if (collision.gameObject.name == "Puck")
+        {
+            gameManagerScript.isPuckOnWinWall = true;
+        }
     }
 }

@@ -26,11 +26,9 @@ public class Puck : MonoBehaviour
     void Start()
     {
         puckRB = GetComponent<Rigidbody2D>();
+        speed = 1f;
+        puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
         puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-        isInSpace= true;
-
-        speed = 1;
-
         redBars = GameObject.FindGameObjectsWithTag("RedBars");
         orangeBars = GameObject.FindGameObjectsWithTag("OrangeBars");
         greenBars = GameObject.FindGameObjectsWithTag("GreenBars");
@@ -38,20 +36,17 @@ public class Puck : MonoBehaviour
     }
     void Update()
     {
-        if (isInSpace == true)
+        if (isInSpace == false && gameManagerScript.isPlayerDead == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && gameManagerScript.bGMGameObject == isActiveAndEnabled)
         {
-            if (puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && gameManagerScript.bGMGameObject == isActiveAndEnabled && gameManagerScript.isPlayerDead == false)
-            {
-                puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-                float x = Random.Range(-10f, 10f);
-                float y = 10f;
-                puckDirection = new Vector2(x, y);
-                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
-            }
+            puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            float x = Random.Range(-10f, 10f);
+            float y = 10f;
+            puckDirection = new Vector2(x, y);
+            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
         }
-        if (gameManagerScript.isPuckOnWinWall && gameManagerScript.score < gameManagerScript.maxScore)
+        if (gameManagerScript.isPuckOnWinWall == true && gameManagerScript.score < gameManagerScript.maxScore)
         {
-            puck.GetComponent<Transform>().localPosition = Vector2.zero;
+            puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             if (isInSpace == true)
             {
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
@@ -59,7 +54,7 @@ public class Puck : MonoBehaviour
         }
         if (gameManagerScript.score == gameManagerScript.maxScore)
         {
-            puck.GetComponent<Transform>().localPosition = Vector2.zero;
+            puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             if (isInSpace == true)
             {
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
@@ -77,9 +72,14 @@ public class Puck : MonoBehaviour
         {
             puckRB.AddForce(new Vector2(speed+ 0.25f, 0), ForceMode2D.Force);
         }
-        if (hasBrokenRed && gameManagerScript.score < gameManagerScript.maxScore)
+        if (hasBrokenRed && gameManagerScript.score <= gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+        }
+        if (gameManagerScript.isPlayerDead == true && gameManagerScript.lives < 3 && gameManagerScript.lives > 0)
+        {
+            puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
+            puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
