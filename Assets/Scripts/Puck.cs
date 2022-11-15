@@ -47,7 +47,7 @@ public class Puck : MonoBehaviour
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
         }
-        if (gameManagerScript.score == gameManagerScript.maxScore)
+        if (gameManagerScript.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
         {
             puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             if (isInSpace == true)
@@ -135,8 +135,9 @@ public class Puck : MonoBehaviour
         if (collision.gameObject.tag == "RedBars")
         {
             gameManagerScript.score = gameManagerScript.score + 7;
-            gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenRed = true;
             isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
@@ -148,9 +149,10 @@ public class Puck : MonoBehaviour
         if (collision.gameObject.tag == "OrangeBars")
         {
             gameManagerScript.score = gameManagerScript.score + 5;
-            gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
-            hasBrokenOrange= true;
+            gameManagerScript.barBreakObject.SetActive(true);
+            hasBrokenOrange = true;
             isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
@@ -161,8 +163,9 @@ public class Puck : MonoBehaviour
         if (collision.gameObject.tag == "GreenBars")
         {
             gameManagerScript.score = gameManagerScript.score + 3;
-            gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
@@ -173,8 +176,9 @@ public class Puck : MonoBehaviour
         if (collision.gameObject.tag == "YellowBars")
         {
             gameManagerScript.score = gameManagerScript.score + 1;
-            gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
+            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
