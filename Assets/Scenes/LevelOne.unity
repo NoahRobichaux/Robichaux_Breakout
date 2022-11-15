@@ -1838,7 +1838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puck: {fileID: 345167465}
   gameManagerScript: {fileID: 725003280}
-  isInSpace: 0
   speed: 1
 --- !u!58 &345167470
 CircleCollider2D:

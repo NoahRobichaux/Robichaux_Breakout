@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         loadLevelDelay = 5.0f;
         loadMainMenuDelay = 3.0f;
         score = 0;
+        maxScore = 256;
         lives = 3;
         barsBroken = 0;
         scoreText.SetText("" + score);
@@ -74,6 +75,10 @@ public class GameManager : MonoBehaviour
         {
             startText.SetActive(false);
             bGMGameObject.SetActive(true);
+        }
+        if (score > 0)
+        {
+            score = highScore;
         }
         if (isPuckOnWinWall)
         {
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour
         if (isPlayerDead && lives == 3)
         {
             lives = 2;
-            livesText.SetText("Lives: " + lives);
+            livesText.SetText("Lives: 2");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
@@ -105,8 +110,8 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead && lives == 2)
         {
-            lives = 1; ;
-            livesText.SetText("Lives: " + lives);
+            lives = 1;
+            livesText.SetText("Lives: 1");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Space))
@@ -116,8 +121,8 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead && lives == 1)
         {
+            livesText.SetText("Lives: 0");
             lives = 0;
-            livesText.SetText("Lives: " + lives);
         }
         if (isPlayerDead && lives == 0)
         {

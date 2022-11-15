@@ -16,7 +16,9 @@ public class Puck : MonoBehaviour
 
     public GameManager gameManagerScript;
 
-    public bool isInSpace;
+    private bool isInSpace;
+
+    private bool isPuckGoingUp;
 
     private bool hasBrokenOrange = false;
     private bool hasBrokenRed = false;
@@ -39,6 +41,7 @@ public class Puck : MonoBehaviour
         if (isInSpace == false && gameManagerScript.isPlayerDead == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && Input.GetKeyDown(KeyCode.Space))
         {
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            isPuckGoingUp = true;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
@@ -104,10 +107,20 @@ public class Puck : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall")
         {
-            float x = Random.Range(-10f, 10f);
-            float y = 10f;
-            puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            if (isPuckGoingUp == true)
+            {
+                float x = Random.Range(-10f, 10f);
+                float y = 10f;
+                puckDirection = new Vector2(x, y);
+                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            }
+            if (isPuckGoingUp == false)
+            {
+                float x = Random.Range(-10f, 10f);
+                float y = -10f;
+                puckDirection = new Vector2(x, y);
+                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            }
         }
         if (collision.gameObject.name == "Player_Bar")
         {
@@ -125,6 +138,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             hasBrokenRed = true;
+            isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
@@ -137,6 +151,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             hasBrokenOrange= true;
+            isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
@@ -148,6 +163,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.score = gameManagerScript.score + 3;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
@@ -159,6 +175,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.score = gameManagerScript.score + 1;
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
+            isPuckGoingUp = false;
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
