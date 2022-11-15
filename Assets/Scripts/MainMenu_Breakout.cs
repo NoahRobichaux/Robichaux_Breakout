@@ -8,38 +8,31 @@ public class MainMenu_Breakout : MonoBehaviour
 {
     public GameManager gameManagerScript;
     public TMP_Text highScoreText;
+    public Scene mainMenu;
+    public struct SaticIntegers
+    {
+        public static int score;
+        public static int highScore;
+    }
     void Start()
     {
-        highScoreText.SetText("No High Score");
+        mainMenu = SceneManager.GetSceneByName("MainMenu");
     }
-
     void Update()
     {
-        if (DataSaver.loadData<PlayerSaveData>("Save Data").highScore == 0)
+        if (MainMenu_Breakout.SaticIntegers.score == 0)
         {
             highScoreText.SetText("No High Score");
         }
-        if (DataSaver.loadData<PlayerSaveData>("Save Data").highScore > 0)
+        else if (MainMenu_Breakout.SaticIntegers.highScore > 0)
         {
-            DataSaver.loadData<PlayerSaveData>("Save Data").score = DataSaver.loadData<PlayerSaveData>("Save Data").highScore;
-            highScoreText.SetText("High Score: " + DataSaver.loadData<PlayerSaveData>("Save Data").highScore);
+            highScoreText.SetText("High Score: " + MainMenu_Breakout.SaticIntegers.highScore);
         }
     }
-    public void LoadData()
+    void OnEnable()
     {
-        PlayerSaveData loadedData = DataSaver.loadData<PlayerSaveData>("Save Data");
-        if (loadedData == null)
-        {
-            return;
-        }
-        for (int i = 0; i < loadedData.ID.Count; i++)
-        {
-            Debug.Log("ID: " + loadedData.ID[i]);
-        }
-        for (int i = 0; i < loadedData.Amounts.Count; i++)
-        {
-            Debug.Log("Amounts: " + loadedData.Amounts[i]);
-        }
+        MainMenu_Breakout.SaticIntegers.score = PlayerPrefs.GetInt("Score");
+        MainMenu_Breakout.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
     }
     public void LoadLevel(string level)
     {

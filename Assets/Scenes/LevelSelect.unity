@@ -302,7 +302,7 @@ RectTransform:
   m_Children:
   - {fileID: 1741882611}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1155,6 +1155,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733662511}
   m_CullTransparentMesh: 1
+--- !u!1 &737492093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737492095}
+  - component: {fileID: 737492094}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &737492094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737492093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  lives: 0
+  score: 0
+  maxScore: 0
+  highScore: 0
+  barsBroken: 0
+  isPuckOnWinWall: 0
+  nextLevel: 
+  mainMenuScene: 
+  loadLevelDelay: 0
+  loadMainMenuDelay: 0
+  isPlayerDead: 0
+  puckScript: {fileID: 0}
+  barBreak: {fileID: 0}
+  barBreakObject: {fileID: 0}
+  lostLife: {fileID: 0}
+  lostLifeObject: {fileID: 0}
+  gameOver: {fileID: 0}
+  gameOverObject: {fileID: 0}
+  gameWin: {fileID: 0}
+  gameWinObject: {fileID: 0}
+  bGM: {fileID: 0}
+  bGMGameObject: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  startText: {fileID: 0}
+  barContent: {fileID: 0}
+  playerBar: {fileID: 0}
+  LevelOne:
+    m_Handle: 0
+  LevelTwo:
+    m_Handle: 0
+--- !u!4 &737492095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737492093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462145739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1872,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2069595603
 GameObject:

@@ -817,7 +817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 1370832476}
   highScoreText: {fileID: 1022226906}
-  MainMenu:
+  mainMenu:
     m_Handle: 0
 --- !u!4 &1154494852
 Transform:
@@ -1097,9 +1097,7 @@ MonoBehaviour:
   livesText: {fileID: 0}
   scoreText: {fileID: 0}
   lives: 0
-  score: 0
   maxScore: 0
-  highScore: 0
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
@@ -1123,6 +1121,10 @@ MonoBehaviour:
   startText: {fileID: 0}
   barContent: {fileID: 0}
   playerBar: {fileID: 0}
+  LevelOne:
+    m_Handle: 0
+  LevelTwo:
+    m_Handle: 0
 --- !u!4 &1370832477
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,9 +1371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e4609caf90b77489fd2e588f79846f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 0}
-  highScoreText: {fileID: 0}
-  MainMenu:
+  gameManagerScript: {fileID: 1370832476}
+  highScoreText: {fileID: 1022226906}
+  mainMenu:
     m_Handle: 0
 --- !u!1 &2111459642
 GameObject:

@@ -47,7 +47,7 @@ public class Puck : MonoBehaviour
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
         }
-        if (gameManagerScript.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
+        if (GameManager.SaticIntegers.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
         {
             puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             if (isInSpace == true)
@@ -55,19 +55,19 @@ public class Puck : MonoBehaviour
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
         }
-        if (gameManagerScript.barsBroken >= 4 && gameManagerScript.score < gameManagerScript.maxScore)
+        if (gameManagerScript.barsBroken >= 4 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
         }
-        if (gameManagerScript.barsBroken >= 12 && gameManagerScript.score < gameManagerScript.maxScore)
+        if (gameManagerScript.barsBroken >= 12 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
         }
-        if (hasBrokenOrange && gameManagerScript.score < gameManagerScript.maxScore)
+        if (hasBrokenOrange && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed+ 0.25f, 0), ForceMode2D.Force);
         }
-        if (hasBrokenRed && gameManagerScript.score <= gameManagerScript.maxScore)
+        if (hasBrokenRed && GameManager.SaticIntegers.score <= gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
         }
@@ -134,8 +134,8 @@ public class Puck : MonoBehaviour
     {
         if (collision.gameObject.tag == "RedBars")
         {
-            gameManagerScript.score = gameManagerScript.score + 7;
-            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
+            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 7;
+            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenRed = true;
@@ -148,8 +148,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "OrangeBars")
         {
-            gameManagerScript.score = gameManagerScript.score + 5;
-            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
+            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 5;
+            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenOrange = true;
@@ -162,8 +162,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "GreenBars")
         {
-            gameManagerScript.score = gameManagerScript.score + 3;
-            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
+            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 3;
+            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
@@ -175,8 +175,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "YellowBars")
         {
-            gameManagerScript.score = gameManagerScript.score + 1;
-            gameManagerScript.scoreText.SetText("Score: " + gameManagerScript.score);
+            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 1;
+            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
