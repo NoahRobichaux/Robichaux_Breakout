@@ -817,6 +817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 1370832476}
   highScoreText: {fileID: 1022226906}
+  MainMenu:
+    m_Handle: 0
 --- !u!4 &1154494852
 Transform:
   m_ObjectHideFlags: 0
@@ -955,7 +957,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -225}
-  m_SizeDelta: {x: 1000, y: 1000}
+  m_SizeDelta: {x: 1000, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340904842
 MonoBehaviour:
@@ -1105,6 +1107,7 @@ MonoBehaviour:
   loadLevelDelay: 0
   loadMainMenuDelay: 0
   isPlayerDead: 0
+  puckScript: {fileID: 0}
   barBreak: {fileID: 0}
   barBreakObject: {fileID: 0}
   lostLife: {fileID: 0}
@@ -1258,7 +1261,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 1000, y: 1000}
+  m_SizeDelta: {x: 1000, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904928768
 MonoBehaviour:
@@ -1368,6 +1371,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 0}
   highScoreText: {fileID: 0}
+  MainMenu:
+    m_Handle: 0
 --- !u!1 &2111459642
 GameObject:
   m_ObjectHideFlags: 0

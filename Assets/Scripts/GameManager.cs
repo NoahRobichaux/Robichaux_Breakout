@@ -57,10 +57,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
         startText.SetActive(true);
-        loadLevelDelay = 5.0f;
-        loadMainMenuDelay = 3.0f;
+        loadLevelDelay = 5f;
+        loadMainMenuDelay = 3f;
         score = 0;
         maxScore = 256;
         lives = 3;
