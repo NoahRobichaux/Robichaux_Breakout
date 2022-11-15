@@ -92,25 +92,38 @@ public class GameManager : MonoBehaviour
                 playerBar.GetComponent<Transform>().localScale = new Vector3(0.5f, 1, 1);
             }
         }
-        if (isPlayerDead)
+        if (isPlayerDead && lives == 3)
         {
-            lives -= -lives + 1;
+            lives = 2;
             livesText.SetText("Lives: " + lives);
             lostLifeObject.SetActive(true);
-            if (lives < 3 && lives > 0)
+            startText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                startText.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    isPlayerDead = false;
-                }
+                isPlayerDead = false;
             }
         }
-        if (lives == 0)
+        if (isPlayerDead && lives == 2)
+        {
+            lives = 1; ;
+            livesText.SetText("Lives: " + lives);
+            lostLifeObject.SetActive(true);
+            startText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isPlayerDead = false;
+            }
+        }
+        if (isPlayerDead && lives == 1)
+        {
+            lives = 0;
+            livesText.SetText("Lives: " + lives);
+        }
+        if (isPlayerDead && lives == 0)
         {
             loseText.SetActive(true);
             gameOverObject.SetActive(true);
-            
+
             if (loadMainMenuDelay > 0)
             {
                 loadMainMenuDelay -= Time.deltaTime;

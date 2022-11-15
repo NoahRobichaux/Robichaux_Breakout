@@ -8,17 +8,27 @@ public class MainMenu_Breakout : MonoBehaviour
 {
     public GameManager gameManagerScript;
     public TMP_Text highScoreText;
+
+    public Scene MainMenu;
     void Start()
     {
-        highScoreText.SetText("No Highscore");
+        highScoreText.SetText("No High Score");
+        MainMenu = SceneManager.GetSceneByName("MainMenu");
     }
 
     void Update()
     {
-        if (gameManagerScript.loadMainMenuDelay <= 0)
+        if (MainMenu.isLoaded)
         {
             gameManagerScript.highScore = gameManagerScript.score;
-            highScoreText.SetText("High Score: " + gameManagerScript.highScore);
+            if (gameManagerScript.highScore > 0)
+            {
+                highScoreText.SetText("High Score: " + gameManagerScript.highScore);
+            }
+            else if (gameManagerScript.highScore == 0)
+            {
+                highScoreText.SetText("No High Score");
+            }
         }
     }
     public void LoadLevel(string level)
