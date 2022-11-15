@@ -36,21 +36,13 @@ public class Puck : MonoBehaviour
     }
     void Update()
     {
-        if (isInSpace == false && gameManagerScript.isPlayerDead == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && gameManagerScript.bGMGameObject == isActiveAndEnabled)
+        if (isInSpace == false && gameManagerScript.isPlayerDead == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && Input.GetKeyDown(KeyCode.Space))
         {
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
-        }
-        if (gameManagerScript.isPuckOnWinWall == true && gameManagerScript.score < gameManagerScript.maxScore)
-        {
-            puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
-            if (isInSpace == true)
-            {
-                puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-            }
         }
         if (gameManagerScript.score == gameManagerScript.maxScore)
         {
@@ -80,6 +72,10 @@ public class Puck : MonoBehaviour
         {
             puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -106,14 +102,14 @@ public class Puck : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall" && isInSpace == false)
+        if (collision.gameObject.tag == "Wall")
         {
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
         }
-        if (collision.gameObject.name == "Player_Bar" && isInSpace == false)
+        if (collision.gameObject.name == "Player_Bar")
         {
             float x = Random.Range(-10f, 10f);
             float y = 10f;
@@ -130,7 +126,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             hasBrokenRed = true;
             float x = Random.Range(-10f, 10f);
-            float y = 10f;
+            float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
@@ -142,7 +138,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             hasBrokenOrange= true;
             float x = Random.Range(-10f, 10f);
-            float y = 10f;
+            float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
@@ -153,7 +149,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             float x = Random.Range(-10f, 10f);
-            float y = 10f;
+            float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
             Destroy(collision.gameObject);
@@ -164,7 +160,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.scoreText.SetText("" + gameManagerScript.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             float x = Random.Range(-10f, 10f);
-            float y = 10f;
+            float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
             Destroy(collision.gameObject);

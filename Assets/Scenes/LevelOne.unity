@@ -1839,7 +1839,7 @@ MonoBehaviour:
   puck: {fileID: 345167465}
   gameManagerScript: {fileID: 725003280}
   isInSpace: 0
-  speed: 0
+  speed: 1
 --- !u!58 &345167470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7430,7 +7430,7 @@ Transform:
   m_GameObject: {fileID: 1621935932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.4, z: 0}
-  m_LocalScale: {x: 11, y: 1, z: 1}
+  m_LocalScale: {x: 12, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7467,7 +7467,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

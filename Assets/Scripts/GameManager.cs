@@ -57,13 +57,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        livesText.SetText("Lives: " + lives);
+        
         startText.SetActive(true);
         loadLevelDelay = 5.0f;
         loadMainMenuDelay = 3.0f;
         score = 0;
+        lives = 3;
         barsBroken = 0;
-        scoreText.SetText("0" + score);
+        scoreText.SetText("" + score);
+        livesText.SetText("Lives: " + lives);
     }
 
     void Update()
