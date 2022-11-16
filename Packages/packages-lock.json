@@ -2,7 +2,11 @@
   "dependencies": {
     "com.unity.2d.animation": {
       "version": "8.0.5",
+<<<<<<< Updated upstream
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
         "com.unity.2d.common": "7.0.3",
@@ -27,7 +31,11 @@
     },
     "com.unity.2d.pixel-perfect": {
       "version": "5.0.2",
+<<<<<<< Updated upstream
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -51,7 +59,11 @@
     },
     "com.unity.2d.spriteshape": {
       "version": "8.0.1",
+<<<<<<< Updated upstream
       "depth": 0,
+=======
+      "depth": 1,
+>>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.1.0",
@@ -99,7 +111,11 @@
     },
     "com.unity.burst": {
       "version": "1.7.4",
+<<<<<<< Updated upstream
       "depth": 1,
+=======
+      "depth": 2,
+>>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1"
@@ -175,6 +191,25 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
+    "com.unity.multiplayer-hlapi": {
+      "version": "1.0.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "nuget.mono-cecil": "0.1.5-preview"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.mono-cecil": {
+      "version": "1.10.2",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> Stashed changes
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
       "depth": 1,
@@ -221,6 +256,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.render-pipelines.core": {
       "version": "13.1.8",
       "depth": 1,
@@ -231,6 +267,8 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       }
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.render-pipelines.universal": {
       "version": "13.1.8",
       "depth": 0,
@@ -242,6 +280,7 @@
         "com.unity.shadergraph": "13.1.8"
       }
     },
+<<<<<<< Updated upstream
     "com.unity.searcher": {
       "version": "4.9.2",
       "depth": 2,
@@ -259,6 +298,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.services.authentication": {
       "version": "2.3.1",
       "depth": 2,
@@ -282,6 +323,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.shadergraph": {
       "version": "13.1.8",
       "depth": 1,
@@ -291,6 +333,8 @@
         "com.unity.searcher": "4.9.2"
       }
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.sysroot": {
       "version": "2.0.3",
       "depth": 1,

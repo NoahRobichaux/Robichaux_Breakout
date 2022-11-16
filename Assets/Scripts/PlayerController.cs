@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
             playerRigidbody2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
         }
     }
+<<<<<<< Updated upstream
     void RightButtonPress()
     {
         playerRigidbody2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
@@ -31,4 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidbody2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
     }
+=======
+
+>>>>>>> Stashed changes
 }
