@@ -2895,9 +2895,7 @@ MonoBehaviour:
   livesText: {fileID: 1514370443}
   scoreText: {fileID: 1913012789}
   lives: 3
-  score: 0
   maxScore: 256
-  highScore: 0
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: LevelTwo
@@ -2921,6 +2919,11 @@ MonoBehaviour:
   startText: {fileID: 442740261}
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
+  gameManagerObject: {fileID: 725003279}
+  LevelOne:
+    m_Handle: 0
+  LevelTwo:
+    m_Handle: 0
 --- !u!4 &725003281
 Transform:
   m_ObjectHideFlags: 0

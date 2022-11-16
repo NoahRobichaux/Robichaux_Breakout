@@ -1187,9 +1187,7 @@ MonoBehaviour:
   livesText: {fileID: 0}
   scoreText: {fileID: 0}
   lives: 0
-  score: 0
   maxScore: 0
-  highScore: 0
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
@@ -1213,6 +1211,7 @@ MonoBehaviour:
   startText: {fileID: 0}
   barContent: {fileID: 0}
   playerBar: {fileID: 0}
+  gameManagerObject: {fileID: 737492093}
   LevelOne:
     m_Handle: 0
   LevelTwo:

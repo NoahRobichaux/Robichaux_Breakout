@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         public static int score;
         public static int highScore;
+        public static int isGameLost;
     }
     
     public int maxScore;
@@ -30,9 +31,9 @@ public class GameManager : MonoBehaviour
 
     public string mainMenuScene;
 
-    public float loadLevelDelay;
+    public float loadLevelDelay = 5f;
 
-    public float loadMainMenuDelay;
+    public float loadMainMenuDelay = 3f;
 
     public bool isPlayerDead;
 
@@ -61,6 +62,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerBar;
 
+    public GameObject gameManagerObject;
+
     public Scene LevelOne;
     public Scene LevelTwo;
 
@@ -72,6 +75,7 @@ public class GameManager : MonoBehaviour
         loadLevelDelay = 5f;
         loadMainMenuDelay = 3f;
         GameManager.SaticIntegers.score = 0;
+        GameManager.SaticIntegers.isGameLost = 0;
         maxScore = 256;
         lives = 3;
         barsBroken = 0;
@@ -111,10 +115,10 @@ public class GameManager : MonoBehaviour
             livesText.SetText("Lives: 2");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                isPlayerDead = false;
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && lives == 2)
+        {
+            isPlayerDead = false;
         }
         if (isPlayerDead && lives == 2)
         {
@@ -122,10 +126,10 @@ public class GameManager : MonoBehaviour
             livesText.SetText("Lives: 1");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                isPlayerDead = false;
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && lives == 1)
+        {
+            isPlayerDead = false;
         }
         if (isPlayerDead && lives == 1)
         {
@@ -134,11 +138,17 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead && lives == 0)
         {
-            loseText.SetActive(true);
-            gameOverObject.SetActive(true);
             if (loadMainMenuDelay > 0)
             {
                 loadMainMenuDelay -= Time.deltaTime;
+                loseText.SetActive(true);
+                gameOverObject.SetActive(true);
+                GameManager.SaticIntegers.isGameLost = 1;
+                PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
+                PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
+                PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+                DontDestroyOnLoad(gameManagerObject);
+                DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             }
             if (loadMainMenuDelay <= 0)
             {
@@ -146,9 +156,17 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    void OnEnable()
+    {
+        DontDestroyOnLoad(gameManagerObject);
+        DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
+    }
     void OnDisable()
     {
         PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
         PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
+        PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+        DontDestroyOnLoad(gameManagerObject);
+        DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
     }
 }

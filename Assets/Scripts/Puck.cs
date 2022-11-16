@@ -113,6 +113,7 @@ public class Puck : MonoBehaviour
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+                gameManagerScript.barBreakObject.SetActive(true);
             }
             if (isPuckGoingUp == false)
             {
@@ -120,6 +121,7 @@ public class Puck : MonoBehaviour
                 float y = -10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+                gameManagerScript.barBreakObject.SetActive(true);
             }
         }
         if (collision.gameObject.name == "Player_Bar")
@@ -128,6 +130,7 @@ public class Puck : MonoBehaviour
             float y = 10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            gameManagerScript.barBreakObject.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

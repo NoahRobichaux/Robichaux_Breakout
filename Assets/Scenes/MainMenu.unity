@@ -1121,6 +1121,7 @@ MonoBehaviour:
   startText: {fileID: 0}
   barContent: {fileID: 0}
   playerBar: {fileID: 0}
+  gameManagerObject: {fileID: 1370832475}
   LevelOne:
     m_Handle: 0
   LevelTwo:
