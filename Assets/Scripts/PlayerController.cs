@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Device;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,5 +22,13 @@ public class PlayerController : MonoBehaviour
         {
             playerRigidbody2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
         }
+    }
+    void RightButtonPress()
+    {
+        playerRigidbody2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
+    }
+    void LeftButtonPress()
+    {
+        playerRigidbody2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
     }
 }
