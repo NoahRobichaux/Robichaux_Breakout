@@ -816,7 +816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 1370832476}
-  highScoreText: {fileID: 1022226906}
   mainMenu:
     m_Handle: 0
 --- !u!4 &1154494852
@@ -827,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154494850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1002343, y: 0.00563889, z: 122.49511}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1126,6 +1125,8 @@ MonoBehaviour:
     m_Handle: 0
   LevelTwo:
     m_Handle: 0
+  MainMenu:
+    m_Handle: 0
 --- !u!4 &1370832477
 Transform:
   m_ObjectHideFlags: 0
@@ -1373,7 +1374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 1370832476}
-  highScoreText: {fileID: 1022226906}
   mainMenu:
     m_Handle: 0
 --- !u!1 &2111459642
