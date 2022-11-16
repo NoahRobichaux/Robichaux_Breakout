@@ -3,9 +3,13 @@
     "com.unity.2d.animation": {
       "version": "8.0.5",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "depth": 0,
 =======
       "depth": 1,
+>>>>>>> Stashed changes
+=======
+      "depth": 0,
 >>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
@@ -32,9 +36,13 @@
     "com.unity.2d.pixel-perfect": {
       "version": "5.0.2",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "depth": 0,
 =======
       "depth": 1,
+>>>>>>> Stashed changes
+=======
+      "depth": 0,
 >>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {},
@@ -60,9 +68,13 @@
     "com.unity.2d.spriteshape": {
       "version": "8.0.1",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "depth": 0,
 =======
       "depth": 1,
+>>>>>>> Stashed changes
+=======
+      "depth": 0,
 >>>>>>> Stashed changes
       "source": "registry",
       "dependencies": {
@@ -112,6 +124,9 @@
     "com.unity.burst": {
       "version": "1.7.4",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "depth": 1,
 =======
       "depth": 2,
@@ -192,6 +207,7 @@
       "url": "https://packages.unity.com"
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     "com.unity.multiplayer-hlapi": {
       "version": "1.0.4",
@@ -209,6 +225,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
@@ -298,6 +316,9 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     "com.unity.services.authentication": {
