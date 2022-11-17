@@ -3639,6 +3639,7 @@ GameObject:
   - component: {fileID: 825171013}
   - component: {fileID: 825171012}
   - component: {fileID: 825171015}
+  - component: {fileID: 825171017}
   - component: {fileID: 825171016}
   m_Layer: 5
   m_Name: LevelSelectButton
@@ -3712,6 +3713,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 825171017}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 825171015}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: LoadLevel
@@ -3796,6 +3809,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &825171017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825171010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 725003280}
 --- !u!1001 &839745574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4038,6 +4064,7 @@ GameObject:
   - component: {fileID: 935578303}
   - component: {fileID: 935578302}
   - component: {fileID: 935578305}
+  - component: {fileID: 935578307}
   - component: {fileID: 935578306}
   m_Layer: 5
   m_Name: PlayButton
@@ -4111,6 +4138,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 935578307}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 935578305}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: pauseControl
@@ -4195,6 +4234,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &935578307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935578300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 725003280}
 --- !u!1001 &940974903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5811,6 +5863,7 @@ GameObject:
   - component: {fileID: 1255087620}
   - component: {fileID: 1255087619}
   - component: {fileID: 1255087622}
+  - component: {fileID: 1255087624}
   - component: {fileID: 1255087623}
   m_Layer: 5
   m_Name: RestartButton
@@ -5884,6 +5937,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1255087624}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1255087622}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: LoadLevel
@@ -5968,6 +6033,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &1255087624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255087617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 725003280}
 --- !u!1001 &1260141530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9440,6 +9518,7 @@ GameObject:
   - component: {fileID: 2128374425}
   - component: {fileID: 2128374424}
   - component: {fileID: 2128374427}
+  - component: {fileID: 2128374428}
   - component: {fileID: 2128374423}
   m_Layer: 5
   m_Name: PauseButton
@@ -9558,6 +9637,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2128374428}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2128374425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9608,6 +9699,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfab869a525b3c246ad70dffbf08e14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2128374428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128374421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 725003280}
 --- !u!1001 &2129924763
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -934,6 +934,7 @@ GameObject:
   - component: {fileID: 1340904843}
   - component: {fileID: 1340904842}
   - component: {fileID: 1340904845}
+  - component: {fileID: 1340904846}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1006,6 +1007,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1340904846}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1340904845}
         m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
         m_MethodName: QuitGame
@@ -1068,6 +1081,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac0c3145763560488d242c3ba616485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1340904846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340904840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 1370832476}
 --- !u!1 &1370832475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1269,7 @@ GameObject:
   - component: {fileID: 1904928769}
   - component: {fileID: 1904928768}
   - component: {fileID: 1904928771}
+  - component: {fileID: 1904928772}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1315,6 +1342,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1904928772}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: ButtonPressSFX
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1904928771}
         m_TargetAssemblyTypeName: MainMenu_Breakout, Assembly-CSharp
         m_MethodName: LoadLevel
@@ -1384,6 +1423,19 @@ MonoBehaviour:
   highScoreObject: {fileID: 1022226904}
   playButton: {fileID: 1904928766}
   exitButton: {fileID: 1340904840}
+--- !u!114 &1904928772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904928766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 1370832476}
 --- !u!1 &2111459642
 GameObject:
   m_ObjectHideFlags: 0
