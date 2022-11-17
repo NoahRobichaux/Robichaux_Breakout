@@ -28,7 +28,7 @@ public class Puck : MonoBehaviour
     void Start()
     {
         puckRB = GetComponent<Rigidbody2D>();
-        speed = 1f;
+        speed = 0.5f;
         puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
         puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         redBars = GameObject.FindGameObjectsWithTag("RedBars");
@@ -57,27 +57,34 @@ public class Puck : MonoBehaviour
         }
         if (gameManagerScript.barsBroken >= 4 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
-            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+            puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
         if (gameManagerScript.barsBroken >= 12 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
-            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+            puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
         if (hasBrokenOrange && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
         {
-            puckRB.AddForce(new Vector2(speed+ 0.25f, 0), ForceMode2D.Force);
+            puckRB.AddForce(new Vector2(speed+ 0.125f, 0), ForceMode2D.Force);
         }
         if (hasBrokenRed && GameManager.SaticIntegers.score <= gameManagerScript.maxScore)
         {
-            puckRB.AddForce(new Vector2(speed + 0.25f, 0), ForceMode2D.Force);
+            puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
-        if (gameManagerScript.isPlayerDead == true && gameManagerScript.lives < 3 && gameManagerScript.lives > 0)
+        if (gameManagerScript.lives < 3 && gameManagerScript.lives > 0)
         {
             puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-            if (Input.GetKeyDown(KeyCode.Space))
+            gameManagerScript.playerBar.GetComponent<Transform>().localPosition = new Vector2(0, -4.5f);
+            if (Input.GetKeyDown(KeyCode.Space) && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition)
             {
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                isPuckGoingUp = true;
+                float x = Random.Range(-10f, 10f);
+                float y = 10f;
+                puckDirection = new Vector2(x, y);
+                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+
             }
         }
     }

@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu_Breakout : MonoBehaviour
 {
     public GameManager gameManagerScript;
     public Scene mainMenu;
 
-    public static TMP_Text highScoreText;
+    public TMP_Text highScoreText;
+    public GameObject highScoreObject;
+
+    public GameObject playButton;
+    public GameObject exitButton;
     public struct SaticIntegers
     {
         public static int score;
         public static int highScore;
         public static int isGameLost;
     }
-    void Start()
+    public void Start()
     {
         if (MainMenu_Breakout.SaticIntegers.isGameLost == 1)
         {
@@ -28,8 +34,16 @@ public class MainMenu_Breakout : MonoBehaviour
         }
         mainMenu = SceneManager.GetSceneByName("MainMenu");
         DataSaver.loadData<PlayerSaveData>("Save Data");
+        highScoreObject = GameObject.FindGameObjectWithTag("HighScoreText");
+        DontDestroyOnLoad(highScoreObject);
+        DontDestroyOnLoad(playButton);
+        DontDestroyOnLoad(exitButton);
+        playButton.gameObject.SetActive(true);
+        playButton.gameObject.GetComponent<Button>().interactable = true;
+        exitButton.gameObject.SetActive(true);
+        exitButton.gameObject.GetComponent<Button>().interactable = true;
     }
-    void Update()
+    public void Update()
     {
         if (MainMenu_Breakout.SaticIntegers.score == 0)
         {
@@ -39,18 +53,27 @@ public class MainMenu_Breakout : MonoBehaviour
         {
             highScoreText.SetText("High Score: " + MainMenu_Breakout.SaticIntegers.highScore);
         }
+        DontDestroyOnLoad(highScoreObject);
+        DontDestroyOnLoad(playButton);
+        DontDestroyOnLoad(exitButton);
     }
     void OnEnable()
     {
         MainMenu_Breakout.SaticIntegers.score = PlayerPrefs.GetInt("Score");
         MainMenu_Breakout.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
         MainMenu_Breakout.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+        DontDestroyOnLoad(highScoreObject);
+        DontDestroyOnLoad(playButton);
+        DontDestroyOnLoad(exitButton);
     }
     void OnDisable()
     {
         PlayerPrefs.SetInt("Score", MainMenu_Breakout.SaticIntegers.score);
         PlayerPrefs.SetInt("High Score", MainMenu_Breakout.SaticIntegers.highScore);
         PlayerPrefs.SetInt("Is Game Lost", MainMenu_Breakout.SaticIntegers.isGameLost);
+        DontDestroyOnLoad(highScoreObject);
+        DontDestroyOnLoad(playButton);
+        DontDestroyOnLoad(exitButton);
     }
     public void LoadLevel(string level)
     {
@@ -58,11 +81,14 @@ public class MainMenu_Breakout : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 }
-public class MainMenuSaveData
+public class MainMenuSaveData : MonoBehaviour
 {
+    public MainMenu_Breakout mainMenu;
     public static PlayerSaveData loadedData = DataSaver.loadData<PlayerSaveData>("Save Data");
+    public TMP_Text highScoreText;
+    public GameObject highScoreObject;
 
-    private void Start()
+    void Start()
     {
         if (loadedData.isGameLost == 1)
         {
@@ -72,16 +98,27 @@ public class MainMenuSaveData
         {
             return;
         }
+        highScoreObject = GameObject.FindGameObjectWithTag("HighScoreText");
     }
-    private void Update()
+    void Update()
     {
         if (loadedData.score == 0)
         {
-            MainMenu_Breakout.highScoreText.SetText("No High Score");
+            highScoreText.SetText("No High Score");
         }
         else if (loadedData.highScore > 0 && loadedData.isGameLost == 1)
         {
-            MainMenu_Breakout.highScoreText.SetText("High Score: " + loadedData.highScore);
+            highScoreText.SetText("High Score: " + loadedData.highScore);
         }
+    }
+    void OnEnable()
+    {
+        DontDestroyOnLoad(highScoreText);
+        DontDestroyOnLoad(highScoreObject);
+    }
+    void OnDisable()
+    {
+        DontDestroyOnLoad(highScoreText);
+        DontDestroyOnLoad(highScoreObject);
     }
 }
