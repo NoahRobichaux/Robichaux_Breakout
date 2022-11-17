@@ -70,12 +70,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (LevelOne.isLoaded == true)
-        {
-            startText.SetActive(true);
-            scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
-            livesText.SetText("Lives: " + lives);
-        }
+        startText.SetActive(true);
+        scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+        livesText.SetText("Lives: " + lives);
         loadLevelDelay = 5f;
         loadMainMenuDelay = 3f;
         GameManager.SaticIntegers.score = 0;
@@ -121,9 +118,6 @@ public class GameManager : MonoBehaviour
             livesText.SetText("Lives: 2");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && lives == 2)
-        {
             isPlayerDead = false;
         }
         if (isPlayerDead && lives == 2)
@@ -132,9 +126,6 @@ public class GameManager : MonoBehaviour
             livesText.SetText("Lives: 1");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && lives == 1)
-        {
             isPlayerDead = false;
         }
         if (isPlayerDead && lives == 1)
@@ -173,7 +164,9 @@ public class GameManager : MonoBehaviour
         }
         else if (MainMenu.isLoaded)
         {
-            return;
+            DontDestroyOnLoad(gameManagerObject);
+            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
+            DataSaver.loadData<PlayerSaveData>("Save Data");
         }
     }
     void OnDisable()
@@ -188,8 +181,13 @@ public class GameManager : MonoBehaviour
         }
         else if (MainMenu.isLoaded)
         {
-            return;
+            PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
+            PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
+            PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+            DontDestroyOnLoad(gameManagerObject);
+            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
+        DataSaver.saveData(PlayerSaveData.saveData, "SaveData");
     }
 }
 
