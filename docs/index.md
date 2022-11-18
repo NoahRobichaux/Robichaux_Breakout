@@ -2,5 +2,6 @@
 
 In here, you can find various pages of documentation on how my project works.
 
-**Pages**
-- [Main Menu](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu.md)
+**Documentation Pages**
+- [Main Menu](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu)
+- [Puck](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
