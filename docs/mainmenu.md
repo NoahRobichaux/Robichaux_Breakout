@@ -18,5 +18,3 @@
 ***
 > 
 > [**Return To Home Page**](https://noahrobichaux.github.io/Robichaux_Breakout/)
-***
-
