@@ -1,5 +1,6 @@
 remote_theme: pages-themes/cayman@v0.2.0
-plugins_dir: jekyll-remote-theme
+plugins: 
+- jekyll-remote-theme
 title: Breakout Project Wiki
 description: Built In Unity
 show_downloads: true
