@@ -12,11 +12,11 @@
 ***
 
 > ## Other Documentation Pages
-> - [Puck](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
+> - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
 
 
 ***
 > 
-> [Return To Home Page](https://noahrobichaux.github.io/Robichaux_Breakout/)
+> [**Return To Home Page**](https://noahrobichaux.github.io/Robichaux_Breakout/)
 ***
 
