@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     public Scene LevelOne;
     public Scene LevelTwo;
     public Scene MainMenu;
+    public Scene LevelSelect;
 
     void Start()
     {
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
         barsBroken = 0;
         LevelOne = SceneManager.GetSceneByName("LevelOne");
         MainMenu = SceneManager.GetSceneByName("MainMenu");
+        LevelSelect = SceneManager.GetSceneByName("LevelSelect");
         DataSaver.saveData(PlayerSaveData.saveData, "Save Data");
     }
 
@@ -158,12 +160,27 @@ public class GameManager : MonoBehaviour
     {
         if (LevelOne.isLoaded == true)
         {
+            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
+            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
+            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             DataSaver.loadData<PlayerSaveData>("Save Data");
         }
-        else if (MainMenu.isLoaded)
+        else if (MainMenu.isLoaded == true)
         {
+            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
+            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
+            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+            DontDestroyOnLoad(gameManagerObject);
+            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
+            DataSaver.loadData<PlayerSaveData>("Save Data");
+        }
+        else if (LevelSelect.isLoaded == true)
+        {
+            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
+            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
+            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             DataSaver.loadData<PlayerSaveData>("Save Data");
@@ -179,7 +196,15 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
-        else if (MainMenu.isLoaded)
+        else if (MainMenu.isLoaded == true)
+        {
+            PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
+            PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
+            PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+            DontDestroyOnLoad(gameManagerObject);
+            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
+        }
+        else if (LevelSelect.isLoaded == true)
         {
             PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
             PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
