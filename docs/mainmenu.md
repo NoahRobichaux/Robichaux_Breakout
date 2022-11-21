@@ -13,6 +13,7 @@
 
 > ## Other Documentation Pages
 > - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
+> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/player)
 
 
 ***
