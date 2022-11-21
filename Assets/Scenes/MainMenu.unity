@@ -1155,6 +1155,7 @@ GameObject:
   - component: {fileID: 1340904842}
   - component: {fileID: 1340904845}
   - component: {fileID: 1340904846}
+  - component: {fileID: 1340904847}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1328,6 +1329,54 @@ MonoBehaviour:
   levelSelectButton: {fileID: 0}
   buttonPressSFXDelay: 0.5
   buttonHoverSFXDelay: 0.5
+--- !u!114 &1340904847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340904840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  lives: 0
+  maxScore: 0
+  barsBroken: 0
+  isPuckOnWinWall: 0
+  nextLevel: 
+  mainMenuScene: 
+  loadLevelDelay: 5
+  loadMainMenuDelay: 3
+  isPlayerDead: 0
+  puckScript: {fileID: 0}
+  barBreak: {fileID: 1098774812}
+  barBreakObject: {fileID: 0}
+  lostLife: {fileID: 0}
+  lostLifeObject: {fileID: 0}
+  gameOver: {fileID: 0}
+  gameOverObject: {fileID: 0}
+  gameWin: {fileID: 0}
+  gameWinObject: {fileID: 0}
+  bGM: {fileID: 0}
+  bGMGameObject: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  startText: {fileID: 0}
+  barContent: {fileID: 0}
+  playerBar: {fileID: 0}
+  gameManagerObject: {fileID: 0}
+  LevelOne:
+    m_Handle: 0
+  LevelTwo:
+    m_Handle: 0
+  MainMenu:
+    m_Handle: 0
+  LevelSelect:
+    m_Handle: 0
 --- !u!1 &1370832475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1439,8 @@ MonoBehaviour:
   LevelTwo:
     m_Handle: 0
   MainMenu:
+    m_Handle: 0
+  LevelSelect:
     m_Handle: 0
 --- !u!4 &1370832477
 Transform:
@@ -1632,6 +1683,7 @@ GameObject:
   - component: {fileID: 1904928768}
   - component: {fileID: 1904928771}
   - component: {fileID: 1904928772}
+  - component: {fileID: 1904928773}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1812,6 +1864,54 @@ MonoBehaviour:
   levelSelectButton: {fileID: 0}
   buttonPressSFXDelay: 0.5
   buttonHoverSFXDelay: 0.5
+--- !u!114 &1904928773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904928766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  lives: 0
+  maxScore: 0
+  barsBroken: 0
+  isPuckOnWinWall: 0
+  nextLevel: 
+  mainMenuScene: 
+  loadLevelDelay: 5
+  loadMainMenuDelay: 3
+  isPlayerDead: 0
+  puckScript: {fileID: 0}
+  barBreak: {fileID: 1098774812}
+  barBreakObject: {fileID: 0}
+  lostLife: {fileID: 0}
+  lostLifeObject: {fileID: 0}
+  gameOver: {fileID: 0}
+  gameOverObject: {fileID: 0}
+  gameWin: {fileID: 0}
+  gameWinObject: {fileID: 0}
+  bGM: {fileID: 0}
+  bGMGameObject: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  startText: {fileID: 0}
+  barContent: {fileID: 0}
+  playerBar: {fileID: 0}
+  gameManagerObject: {fileID: 0}
+  LevelOne:
+    m_Handle: 0
+  LevelTwo:
+    m_Handle: 0
+  MainMenu:
+    m_Handle: 0
+  LevelSelect:
+    m_Handle: 0
 --- !u!1 &2111459642
 GameObject:
   m_ObjectHideFlags: 0
