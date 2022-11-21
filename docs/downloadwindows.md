@@ -2,11 +2,13 @@
 
 > ## Latest Version
 >
-> - [**Windows 0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
+> - [**Windows 0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
 
 ***
 
 > ## Old Versions
+> 
+> - [**Windows 0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
 > 
 > - [**Windows 0.2.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.0)
 > 
