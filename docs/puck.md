@@ -17,7 +17,7 @@
 >
 > When the puck has broken four bars, the puck speed increases by one quarter of it's original speed. The puck's speed increases by that same amount after twelve hits, and when it has broken through the orange and red rows, respectively.
 >
->Once the puck has hit the back wall, the [Back Wall Script](https://github.com/NoahRobichaux/Robichaux_Breakout/blob/master/Assets/Scripts/WinWall.cs) sets the Player game object's x transform (in the Game Manager Script) to half of it's original width.
+> Once the puck has hit the back wall, the [Back Wall Script](https://github.com/NoahRobichaux/Robichaux_Breakout/blob/master/Assets/Scripts/WinWall.cs) sets the Player game object's x transform (in the Game Manager Script) to half of it's original width.
 
 ***
 
