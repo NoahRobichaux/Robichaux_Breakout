@@ -18,17 +18,19 @@ public class MainMenu_Breakout : MonoBehaviour
     public GameObject exitButton;
     public struct SaticIntegers
     {
-        public static int score;
-        public static int highScore;
-        public static int isGameLost;
+        public static int score = 0;
+        public static int highScore = 0;
+        public static int isGameLost = 0;
     }
     public void Start()
     {
         if (MainMenu_Breakout.SaticIntegers.isGameLost == 1)
         {
             MainMenu_Breakout.SaticIntegers.score = MainMenu_Breakout.SaticIntegers.highScore;
+            SaveManager.score = SaveManager.highScore;
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
         }
-        else if (GameManager.SaticIntegers.isGameLost == 0)
+        else if (SaveManager.isGameLost == 0)
         {
             return;
         }
@@ -52,6 +54,7 @@ public class MainMenu_Breakout : MonoBehaviour
         else if (MainMenu_Breakout.SaticIntegers.highScore > 0 && MainMenu_Breakout.SaticIntegers.isGameLost == 1)
         {
             highScoreText.SetText("High Score: " + MainMenu_Breakout.SaticIntegers.highScore);
+            MainMenu_Breakout.SaticIntegers.score = SaveManager.highScore;
         }
         DontDestroyOnLoad(highScoreObject);
         DontDestroyOnLoad(playButton);
@@ -62,6 +65,8 @@ public class MainMenu_Breakout : MonoBehaviour
         MainMenu_Breakout.SaticIntegers.score = PlayerPrefs.GetInt("Score");
         MainMenu_Breakout.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
         MainMenu_Breakout.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+        SaveManager.score = SaveManager.highScore;
+        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
         DontDestroyOnLoad(highScoreObject);
         DontDestroyOnLoad(playButton);
         DontDestroyOnLoad(exitButton);
@@ -71,6 +76,8 @@ public class MainMenu_Breakout : MonoBehaviour
         PlayerPrefs.SetInt("Score", MainMenu_Breakout.SaticIntegers.score);
         PlayerPrefs.SetInt("High Score", MainMenu_Breakout.SaticIntegers.highScore);
         PlayerPrefs.SetInt("Is Game Lost", MainMenu_Breakout.SaticIntegers.isGameLost);
+        SaveManager.score = SaveManager.highScore;
+        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
         DontDestroyOnLoad(highScoreObject);
         DontDestroyOnLoad(playButton);
         DontDestroyOnLoad(exitButton);
