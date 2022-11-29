@@ -12,6 +12,7 @@
 
 > ## Other Documentation Pages
 > - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu)
+> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/levelone)
 > - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
 
 ***

@@ -23,6 +23,7 @@
 
 > ## Other Documentation Pages
 > - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu)
+> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/levelone)
 > - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/player)
 
 ***
