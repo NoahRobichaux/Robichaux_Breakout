@@ -14,13 +14,6 @@ public class GameManager : MonoBehaviour
     
     public int lives;
 
-    public struct SaticIntegers
-    {
-        public static int score;
-        public static int highScore;
-        public static int isGameLost;
-    }
-    
     public int maxScore;
 
     public int barsBroken;
@@ -72,12 +65,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         startText.SetActive(true);
-        scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+        scoreText.SetText("Score: " + SaveManager.score);
         livesText.SetText("Lives: " + lives);
         loadLevelDelay = 5f;
         loadMainMenuDelay = 3f;
-        GameManager.SaticIntegers.score = 0;
-        GameManager.SaticIntegers.isGameLost = 0;
+        SaveManager.score = 0;
+        SaveManager.isGameLost = 0;
         maxScore = 256;
         lives = 3;
         barsBroken = 0;
@@ -96,14 +89,14 @@ public class GameManager : MonoBehaviour
         }
         if (isPuckOnWinWall)
         {
-            if (GameManager.SaticIntegers.score < maxScore)
+            if (SaveManager.score < maxScore)
             {
                 playerBar.GetComponent<Transform>().localScale = new Vector3(0.5f, 1, 1);
             }
         }
         if (barsBroken == 64)
         {
-            if (loadLevelDelay > 0 && lives > 0 && GameManager.SaticIntegers.score == maxScore)
+            if (loadLevelDelay > 0 && lives > 0 && SaveManager.score == maxScore)
             {
                 winText.SetActive(true);
                 gameWinObject.SetActive(true);
@@ -116,7 +109,7 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead && lives == 3)
         {
-            lives = 2;
+            lives = 0;
             livesText.SetText("Lives: 2");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
@@ -135,17 +128,18 @@ public class GameManager : MonoBehaviour
             livesText.SetText("Lives: 0");
             lives = 0;
         }
-        if (isPlayerDead && lives == 0)
+        if (lives == 0)
         {
             if (loadMainMenuDelay > 0)
             {
                 loadMainMenuDelay -= Time.deltaTime;
                 loseText.SetActive(true);
                 gameOverObject.SetActive(true);
-                GameManager.SaticIntegers.isGameLost = 1;
-                PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
-                PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
-                PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+                SaveManager.isGameLost = 1;
+                MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+                PlayerPrefs.SetInt("Score", SaveManager.score);
+                PlayerPrefs.SetInt("High Score", SaveManager.highScore);
+                PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
                 DataSaver.saveData(PlayerSaveData.saveData, "Save Data");
                 DontDestroyOnLoad(gameManagerObject);
                 DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
@@ -160,27 +154,30 @@ public class GameManager : MonoBehaviour
     {
         if (LevelOne.isLoaded == true)
         {
-            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
-            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
-            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            SaveManager.score = PlayerPrefs.GetInt("Score");
+            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
+            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             DataSaver.loadData<PlayerSaveData>("Save Data");
         }
         else if (MainMenu.isLoaded == true)
         {
-            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
-            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
-            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            SaveManager.score = PlayerPrefs.GetInt("Score");
+            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
+            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             DataSaver.loadData<PlayerSaveData>("Save Data");
         }
         else if (LevelSelect.isLoaded == true)
         {
-            GameManager.SaticIntegers.score = PlayerPrefs.GetInt("Score");
-            GameManager.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
-            GameManager.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            SaveManager.score = PlayerPrefs.GetInt("Score");
+            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
+            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             DataSaver.loadData<PlayerSaveData>("Save Data");
@@ -190,25 +187,28 @@ public class GameManager : MonoBehaviour
     {
         if (LevelOne.isLoaded == true)
         {
-            PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
-            PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            PlayerPrefs.SetInt("Score", SaveManager.score);
+            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
+            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
         else if (MainMenu.isLoaded == true)
         {
-            PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
-            PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
-            DontDestroyOnLoad(gameManagerObject);
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            PlayerPrefs.SetInt("Score", SaveManager.score);
+            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
+            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
+            DontDestroyOnLoad(gameManagerObject);   
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
         else if (LevelSelect.isLoaded == true)
         {
-            PlayerPrefs.SetInt("Score", GameManager.SaticIntegers.score);
-            PlayerPrefs.SetInt("High Score", GameManager.SaticIntegers.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", GameManager.SaticIntegers.isGameLost);
+            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
+            PlayerPrefs.SetInt("Score", SaveManager.score);
+            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
+            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
             DontDestroyOnLoad(gameManagerObject);
             DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
@@ -229,9 +229,9 @@ public class PlayerSaveData
     public void SaveData()
     {
         saveData = new PlayerSaveData();
-        saveData.score = GameManager.SaticIntegers.score;
-        saveData.highScore = GameManager.SaticIntegers.highScore;
-        saveData.isGameLost = GameManager.SaticIntegers.isGameLost;
+        saveData.score = SaveManager.score;
+        saveData.highScore = SaveManager.highScore;
+        saveData.isGameLost = SaveManager.isGameLost;
 
         DataSaver.saveData(saveData, "Save Data");
     }

@@ -38,7 +38,7 @@ public class Puck : MonoBehaviour
     }
     void Update()
     {
-        if (isInSpace == false && gameManagerScript.isPlayerDead == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && Input.GetKeyDown(KeyCode.Space))
+        if (isInSpace == false && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition && Input.GetKeyDown(KeyCode.Space))
         {
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             isPuckGoingUp = true;
@@ -47,7 +47,7 @@ public class Puck : MonoBehaviour
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
         }
-        if (GameManager.SaticIntegers.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
+        if (SaveManager.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
         {
             puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
             if (isInSpace == true)
@@ -55,19 +55,19 @@ public class Puck : MonoBehaviour
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
         }
-        if (gameManagerScript.barsBroken >= 4 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
+        if (gameManagerScript.barsBroken >= 4 && SaveManager.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
-        if (gameManagerScript.barsBroken >= 12 && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
+        if (gameManagerScript.barsBroken >= 12 && SaveManager.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
-        if (hasBrokenOrange && GameManager.SaticIntegers.score < gameManagerScript.maxScore)
+        if (hasBrokenOrange && SaveManager.score < gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed+ 0.125f, 0), ForceMode2D.Force);
         }
-        if (hasBrokenRed && GameManager.SaticIntegers.score <= gameManagerScript.maxScore)
+        if (hasBrokenRed && SaveManager.score <= gameManagerScript.maxScore)
         {
             puckRB.AddForce(new Vector2(speed + 0.125f, 0), ForceMode2D.Force);
         }
@@ -144,8 +144,8 @@ public class Puck : MonoBehaviour
     {
         if (collision.gameObject.tag == "RedBars")
         {
-            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 7;
-            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+            SaveManager.score = SaveManager.score + 7;
+            gameManagerScript.scoreText.SetText("Score: " + SaveManager.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenRed = true;
@@ -158,8 +158,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "OrangeBars")
         {
-            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 5;
-            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+            SaveManager.score = SaveManager.score + 5;
+            gameManagerScript.scoreText.SetText("Score: " + SaveManager.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenOrange = true;
@@ -172,8 +172,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "GreenBars")
         {
-            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 3;
-            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+            SaveManager.score = SaveManager.score + 3;
+            gameManagerScript.scoreText.SetText("Score: " + SaveManager.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
@@ -185,8 +185,8 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.tag == "YellowBars")
         {
-            GameManager.SaticIntegers.score = GameManager.SaticIntegers.score + 1;
-            gameManagerScript.scoreText.SetText("Score: " + GameManager.SaticIntegers.score);
+            SaveManager.score = SaveManager.score + 1;
+            gameManagerScript.scoreText.SetText("Score: " + SaveManager.score);
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
