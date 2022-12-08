@@ -18,28 +18,17 @@ public class MainMenu_Breakout : MonoBehaviour
     public GameObject exitButton;
     public struct SaticIntegers
     {
-        public static int score = 0;
-        public static int highScore = 0;
-        public static int isGameLost = 0;
+        public static int score;
+        public static int highScore;
     }
     public void Start()
     {
-        if (MainMenu_Breakout.SaticIntegers.isGameLost == 1)
-        {
-            MainMenu_Breakout.SaticIntegers.score = MainMenu_Breakout.SaticIntegers.highScore;
-            SaveManager.score = SaveManager.highScore;
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-        }
-        else if (SaveManager.isGameLost == 0)
-        {
-            return;
-        }
+        MainMenu_Breakout.SaticIntegers.score = MainMenu_Breakout.SaticIntegers.highScore;
+        SaveManager.score = SaveManager.highScore;
+        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
+
         mainMenu = SceneManager.GetSceneByName("MainMenu");
-        DataSaver.loadData<PlayerSaveData>("Save Data");
         highScoreObject = GameObject.FindGameObjectWithTag("HighScoreText");
-        DontDestroyOnLoad(highScoreObject);
-        DontDestroyOnLoad(playButton);
-        DontDestroyOnLoad(exitButton);
         playButton.gameObject.SetActive(true);
         playButton.gameObject.GetComponent<Button>().interactable = true;
         exitButton.gameObject.SetActive(true);
@@ -51,81 +40,39 @@ public class MainMenu_Breakout : MonoBehaviour
         {
             highScoreText.SetText("No High Score");
         }
-        else if (MainMenu_Breakout.SaticIntegers.highScore > 0 && MainMenu_Breakout.SaticIntegers.isGameLost == 1)
+        else if (MainMenu_Breakout.SaticIntegers.highScore > 0)
         {
             highScoreText.SetText("High Score: " + MainMenu_Breakout.SaticIntegers.highScore);
             MainMenu_Breakout.SaticIntegers.score = SaveManager.highScore;
         }
-        DontDestroyOnLoad(highScoreObject);
-        DontDestroyOnLoad(playButton);
-        DontDestroyOnLoad(exitButton);
     }
     void OnEnable()
     {
-        MainMenu_Breakout.SaticIntegers.score = PlayerPrefs.GetInt("Score");
-        MainMenu_Breakout.SaticIntegers.highScore = PlayerPrefs.GetInt("High Score");
-        MainMenu_Breakout.SaticIntegers.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
         SaveManager.score = SaveManager.highScore;
         MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-        DontDestroyOnLoad(highScoreObject);
-        DontDestroyOnLoad(playButton);
-        DontDestroyOnLoad(exitButton);
     }
     void OnDisable()
     {
-        PlayerPrefs.SetInt("Score", MainMenu_Breakout.SaticIntegers.score);
-        PlayerPrefs.SetInt("High Score", MainMenu_Breakout.SaticIntegers.highScore);
-        PlayerPrefs.SetInt("Is Game Lost", MainMenu_Breakout.SaticIntegers.isGameLost);
         SaveManager.score = SaveManager.highScore;
         MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-        DontDestroyOnLoad(highScoreObject);
-        DontDestroyOnLoad(playButton);
-        DontDestroyOnLoad(exitButton);
     }
     public void LoadLevel(string level)
     {
-        DataSaver.saveData(PlayerSaveData.saveData, "Save Data");
         SceneManager.LoadScene(level);
     }
 }
 public class MainMenuSaveData : MonoBehaviour
 {
     public MainMenu_Breakout mainMenu;
-    public static PlayerSaveData loadedData = DataSaver.loadData<PlayerSaveData>("Save Data");
     public TMP_Text highScoreText;
     public GameObject highScoreObject;
 
     void Start()
     {
-        if (loadedData.isGameLost == 1)
-        {
-            loadedData.score = loadedData.highScore;
-        }
-        else if (loadedData.score == 0)
-        {
-            return;
-        }
         highScoreObject = GameObject.FindGameObjectWithTag("HighScoreText");
     }
     void Update()
     {
-        if (loadedData.score == 0)
-        {
-            highScoreText.SetText("No High Score");
-        }
-        else if (loadedData.highScore > 0 && loadedData.isGameLost == 1)
-        {
-            highScoreText.SetText("High Score: " + loadedData.highScore);
-        }
-    }
-    void OnEnable()
-    {
-        DontDestroyOnLoad(highScoreText);
-        DontDestroyOnLoad(highScoreObject);
-    }
-    void OnDisable()
-    {
-        DontDestroyOnLoad(highScoreText);
-        DontDestroyOnLoad(highScoreObject);
+
     }
 }

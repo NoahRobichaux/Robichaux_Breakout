@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using System;
-using System.IO;
-using System.Text;
 
 public class GameManager : MonoBehaviour
 {
@@ -70,14 +67,12 @@ public class GameManager : MonoBehaviour
         loadLevelDelay = 5f;
         loadMainMenuDelay = 3f;
         SaveManager.score = 0;
-        SaveManager.isGameLost = 0;
         maxScore = 256;
         lives = 3;
         barsBroken = 0;
         LevelOne = SceneManager.GetSceneByName("LevelOne");
         MainMenu = SceneManager.GetSceneByName("MainMenu");
         LevelSelect = SceneManager.GetSceneByName("LevelSelect");
-        DataSaver.saveData(PlayerSaveData.saveData, "Save Data");
     }
 
     void Update()
@@ -135,14 +130,7 @@ public class GameManager : MonoBehaviour
                 loadMainMenuDelay -= Time.deltaTime;
                 loseText.SetActive(true);
                 gameOverObject.SetActive(true);
-                SaveManager.isGameLost = 1;
                 MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-                PlayerPrefs.SetInt("Score", SaveManager.score);
-                PlayerPrefs.SetInt("High Score", SaveManager.highScore);
-                PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
-                DataSaver.saveData(PlayerSaveData.saveData, "Save Data");
-                DontDestroyOnLoad(gameManagerObject);
-                DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
             }
             if (loadMainMenuDelay <= 0)
             {
@@ -155,32 +143,14 @@ public class GameManager : MonoBehaviour
         if (LevelOne.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            SaveManager.score = PlayerPrefs.GetInt("Score");
-            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
-            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
-            DontDestroyOnLoad(gameManagerObject);
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
-            DataSaver.loadData<PlayerSaveData>("Save Data");
         }
         else if (MainMenu.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            SaveManager.score = PlayerPrefs.GetInt("Score");
-            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
-            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
-            DontDestroyOnLoad(gameManagerObject);
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
-            DataSaver.loadData<PlayerSaveData>("Save Data");
         }
         else if (LevelSelect.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            SaveManager.score = PlayerPrefs.GetInt("Score");
-            SaveManager.highScore = PlayerPrefs.GetInt("High Score");
-            SaveManager.isGameLost = PlayerPrefs.GetInt("Is Game Lost");
-            DontDestroyOnLoad(gameManagerObject);
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
-            DataSaver.loadData<PlayerSaveData>("Save Data");
         }
     }
     void OnDisable()
@@ -188,177 +158,14 @@ public class GameManager : MonoBehaviour
         if (LevelOne.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            PlayerPrefs.SetInt("Score", SaveManager.score);
-            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
-            DontDestroyOnLoad(gameManagerObject);
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
         else if (MainMenu.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            PlayerPrefs.SetInt("Score", SaveManager.score);
-            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
-            DontDestroyOnLoad(gameManagerObject);   
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
         else if (LevelSelect.isLoaded == true)
         {
             MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-            PlayerPrefs.SetInt("Score", SaveManager.score);
-            PlayerPrefs.SetInt("High Score", SaveManager.highScore);
-            PlayerPrefs.SetInt("Is Game Lost", SaveManager.isGameLost);
-            DontDestroyOnLoad(gameManagerObject);
-            DontDestroyOnLoad(gameManagerObject.GetComponent<GameManager>());
         }
-        DataSaver.saveData(PlayerSaveData.saveData, "SaveData");
-    }
-}
-
-[Serializable]
-public class PlayerSaveData
-{
-    public List<int> ID = new List<int>();
-    public List<int> Amounts = new List<int>();
-    public GameManager gameManagerScript;
-    public int score;
-    public int highScore;
-    public int isGameLost;
-    public static PlayerSaveData saveData;
-    public void SaveData()
-    {
-        saveData = new PlayerSaveData();
-        saveData.score = SaveManager.score;
-        saveData.highScore = SaveManager.highScore;
-        saveData.isGameLost = SaveManager.isGameLost;
-
-        DataSaver.saveData(saveData, "Save Data");
-    }
-    public void LoadData()
-    {
-        PlayerSaveData loadedData = DataSaver.loadData<PlayerSaveData>("Save Data");
-        if (loadedData == null)
-        {
-            return;
-        }
-        for (int i = 0; i < loadedData.ID.Count; i++)
-        {
-            Debug.Log("ID: " + loadedData.ID[i]);
-        }
-        for (int i = 0; i < loadedData.Amounts.Count; i++)
-        {
-            Debug.Log("Amounts: " + loadedData.Amounts[i]);
-        }
-    }
-    public void DeleteData()
-    {
-        DataSaver.deleteData("Save Data");
-    }
-}
-public class DataSaver
-{
-    //Save Data
-    public static void saveData<T>(T dataToSave, string dataFileName)
-    {
-        string tempPath = Path.Combine(Application.persistentDataPath, "data");
-        tempPath = Path.Combine(tempPath, dataFileName + ".txt");
-
-        //Convert To Json then to bytes
-        string jsonData = JsonUtility.ToJson(dataToSave, true);
-        byte[] jsonByte = Encoding.ASCII.GetBytes(jsonData);
-
-        //Create Directory if it does not exist
-        if (!Directory.Exists(Path.GetDirectoryName(tempPath)))
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(tempPath));
-        }
-        //Debug.Log(path);
-
-        try
-        {
-            File.WriteAllBytes(tempPath, jsonByte);
-            Debug.Log("Saved Data to: " + tempPath.Replace("/", "\\"));
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning("Failed To PlayerInfo Data to: " + tempPath.Replace("/", "\\"));
-            Debug.LogWarning("Error: " + e.Message);
-        }
-    }
-
-    //Load Data
-    public static T loadData<T>(string dataFileName)
-    {
-        string tempPath = Path.Combine(Application.persistentDataPath, "data");
-        tempPath = Path.Combine(tempPath, dataFileName + ".txt");
-
-        //Exit if Directory or File does not exist
-        if (!Directory.Exists(Path.GetDirectoryName(tempPath)))
-        {
-            Debug.LogWarning("Directory does not exist");
-            return default(T);
-        }
-
-        if (!File.Exists(tempPath))
-        {
-            Debug.Log("File does not exist");
-            return default(T);
-        }
-
-        //Load saved Json
-        byte[] jsonByte = null;
-        try
-        {
-            jsonByte = File.ReadAllBytes(tempPath);
-            Debug.Log("Loaded Data from: " + tempPath.Replace("/", "\\"));
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning("Failed To Load Data from: " + tempPath.Replace("/", "\\"));
-            Debug.LogWarning("Error: " + e.Message);
-        }
-
-        //Convert to json string
-        string jsonData = Encoding.ASCII.GetString(jsonByte);
-
-        //Convert to Object
-        object resultValue = JsonUtility.FromJson<T>(jsonData);
-        return (T)Convert.ChangeType(resultValue, typeof(T));
-    }
-
-    public static bool deleteData(string dataFileName)
-    {
-        bool success = false;
-
-        //Load Data
-        string tempPath = Path.Combine(Application.persistentDataPath, "data");
-        tempPath = Path.Combine(tempPath, dataFileName + ".txt");
-
-        //Exit if Directory or File does not exist
-        if (!Directory.Exists(Path.GetDirectoryName(tempPath)))
-        {
-            Debug.LogWarning("Directory does not exist");
-            return false;
-        }
-
-        if (!File.Exists(tempPath))
-        {
-            Debug.Log("File does not exist");
-            return false;
-        }
-
-        try
-        {
-            File.Delete(tempPath);
-            Debug.Log("Data deleted from: " + tempPath.Replace("/", "\\"));
-            success = true;
-        }
-        catch (Exception e)
-        {
-            Debug.LogWarning("Failed To Delete Data: " + e.Message);
-        }
-
-        return success;
     }
 }
