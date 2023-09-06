@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
             startText.SetActive(true);
             isPlayerDead = false;
         }
-        if (isPlayerDead && lives == 2)
+        else if (isPlayerDead && lives == 2)
         {
             lives = 1;
             livesText.SetText("Lives: 1");
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
             startText.SetActive(true);
             isPlayerDead = false;
         }
-        if (isPlayerDead && lives == 1)
+        else if (isPlayerDead && lives == 1)
         {
             livesText.SetText("Lives: 0");
             lives = 0;
