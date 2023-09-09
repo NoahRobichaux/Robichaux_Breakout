@@ -16,13 +16,13 @@ public class UIManager : MonoBehaviour
     {
         if (Time.timeScale == 1)
         {
-            Time.timeScale = 0;
             showPaused();
+            Time.timeScale = 0;
         }
         else if (Time.timeScale == 0)
         {
-            Time.timeScale = 1;
             hidePaused();
+            Time.timeScale = 1;
         }
     }
 
@@ -62,13 +62,13 @@ public class UIManager : MonoBehaviour
         {
             if (Time.timeScale == 1)
             {
-                Time.timeScale = 0;
                 showPaused();
+                Time.timeScale = 0;
             }
             else if (Time.timeScale == 0)
             {
-                Time.timeScale = 1;
                 hidePaused();
+                Time.timeScale = 1;
             }
         }
     }

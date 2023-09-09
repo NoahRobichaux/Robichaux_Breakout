@@ -16,10 +16,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             playerRigidbody2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         if (Input.GetKey(KeyCode.A))
         {
             playerRigidbody2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionY;
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            playerRigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }
