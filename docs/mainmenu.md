@@ -12,9 +12,9 @@
 ***
 
 > ## Other Documentation Pages
-> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/levelone)
-> - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
-> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/player)
+> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/levelone)
+> - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/puck)
+> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/player)
 
 
 ***

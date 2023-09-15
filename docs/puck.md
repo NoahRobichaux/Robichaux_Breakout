@@ -1,8 +1,8 @@
 # Puck
 
 > ## Contents
-> - **Jump To** [**Info**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu#info)
-> - **Jump To** [**Other Documentation Pages**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu#other-documentation-pages)
+> - **Jump To** [**Info**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu#info)
+> - **Jump To** [**Other Documentation Pages**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu#other-documentation-pages)
 
 ***
 
@@ -22,9 +22,9 @@
 ***
 
 > ## Other Documentation Pages
-> - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu)
-> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/levelone)
-> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/player)
+> - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu)
+> - [**Level One**](https://noahrobichaux.github.io/Robichaux_Breakout/levelone)
+> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/player)
 
 ***
 

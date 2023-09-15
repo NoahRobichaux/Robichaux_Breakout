@@ -11,9 +11,9 @@
 ***
 
 > ## Other Documentation Pages
-> - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/mainmenu)
-> - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/puck)
-> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/docs/player)
+> - [**Main Menu**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu)
+> - [**Puck**](https://noahrobichaux.github.io/Robichaux_Breakout/puck)
+> - [**Player Controller**](https://noahrobichaux.github.io/Robichaux_Breakout/player)
 
 ***
 
