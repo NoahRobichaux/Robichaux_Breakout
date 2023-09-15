@@ -1,21 +1,26 @@
-# WebGL Downloads
+# WebGL Downloads (Legacy)
 
-> ## Latest Version
+> ## Final Version
 >
-> - [**Web GL 0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
+> - [**WebGL v0.2.4**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.4)
 
 
 ***
 
 > ## Old Versions
 > 
-> - [**Web GL 0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
-> 
-> - [**WebGL 0.2.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.0)
-> 
-> - [**WebGL 0.1.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.1)
 >
-> - [**WebGL 0.1.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.0)
+> - [**WebGL v0.2.3**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.3)
+>
+> - [**WebGL v0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
+>
+> - [**WebGL v0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
+> 
+> - [**WebGL v0.2.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.0)
+> 
+> - [**WebGL v0.1.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.1)
+>
+> - [**WebGL v0.1.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.0)
 
 
 ***

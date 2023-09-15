@@ -1,20 +1,33 @@
 # Windows Downloads
 
 > ## Latest Version
->
-> - [**Windows 0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
+
+> - [**Windows v0.2.5**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.5)
 
 ***
 
 > ## Old Versions
+
+>### Version 0.2.x
+
+> - [**Windows v0.2.4**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.4)
+>
+> - [**Windows v0.2.3**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.3)
+>
+> - [**Windows v0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
+>
+> - [**Windows v0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
 > 
-> - [**Windows 0.2.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.1)
+> - [**Windows v0.2.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.0)
+>
+
+***
+
+>### Version 0.1.x
+
+> - [**Windows v0.1.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.1)
 > 
-> - [**Windows 0.2.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.0)
-> 
-> - [**Windows 0.1.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.1)
-> 
-> - [**Windows 0.1.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.0)
+> - [**Windows v0.1.0**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.0)
 
 ***
 
