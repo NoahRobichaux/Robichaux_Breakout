@@ -1,15 +1,14 @@
 # Puck
 
 > ## Contents
-> - **Jump To** [**Info**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu#info)
-> - **Jump To** [**Other Documentation Pages**](https://noahrobichaux.github.io/Robichaux_Breakout/mainmenu#other-documentation-pages)
+> - **Jump To** [**Info**](https://noahrobichaux.github.io/Robichaux_Breakout/puck#info)
+> - **Jump To** [**Other Documentation Pages**](https://noahrobichaux.github.io/Robichaux_Breakout/puck#other-documentation-pages)
 
 ***
 
 > ## Info
-> 
+
 > The puck is a Unity game object that is controlled by the [_Puck Script_](https://github.com/NoahRobichaux/Robichaux_Breakout/blob/master/Assets/Scripts/Puck.cs).
-> 
 > At the start of Level One being loaded, the puck is frozen and the gravity scale of the puck is set to zero. 
 > Then, if the player presses the spacebar, the game starts and the puck goes up in a random _x_ direction (between -10f and 10f, where f declares that it is a float). 
 > 
