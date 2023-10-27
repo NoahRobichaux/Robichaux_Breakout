@@ -45,7 +45,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
         }
         if (SaveManager.score == gameManagerScript.maxScore && gameManagerScript.barsBroken == 64)
         {
@@ -83,7 +83,7 @@ public class Puck : MonoBehaviour
                 float x = Random.Range(-10f, 10f);
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
-                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+                puckRB.AddForce(puckDirection, ForceMode2D.Force);
 
             }
         }
@@ -119,7 +119,7 @@ public class Puck : MonoBehaviour
                 float x = Random.Range(-10f, 10f);
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
-                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+                puckRB.AddForce(puckDirection, ForceMode2D.Force);
                 gameManagerScript.barBreakObject.SetActive(true);
             }
             if (isPuckGoingUp == false)
@@ -127,7 +127,7 @@ public class Puck : MonoBehaviour
                 float x = Random.Range(-10f, 10f);
                 float y = -10f;
                 puckDirection = new Vector2(x, y);
-                puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+                puckRB.AddForce(puckDirection, ForceMode2D.Force);
                 gameManagerScript.barBreakObject.SetActive(true);
             }
         }
@@ -136,7 +136,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
             gameManagerScript.barBreakObject.SetActive(true);
         }
     }
@@ -153,7 +153,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "OrangeBars")
@@ -167,7 +167,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "GreenBars")
@@ -180,7 +180,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "YellowBars")
@@ -193,7 +193,7 @@ public class Puck : MonoBehaviour
             float x = Random.Range(-10f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
-            puckRB.AddForce(puckDirection, ForceMode2D.Impulse);
+            puckRB.AddForce(puckDirection, ForceMode2D.Force);
             Destroy(collision.gameObject);
         }
     }
