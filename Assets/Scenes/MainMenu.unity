@@ -290,6 +290,123 @@ Transform:
   - {fileID: 1765236568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &262146653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262146656}
+  - component: {fileID: 262146655}
+  - component: {fileID: 262146654}
+  - component: {fileID: 262146657}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &262146654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262146653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e4609caf90b77489fd2e588f79846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 262146655}
+  highScoreText: {fileID: 1022226906}
+  highScoreObject: {fileID: 1022226904}
+  playButton: {fileID: 1904928766}
+  exitButton: {fileID: 1340904840}
+--- !u!114 &262146655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262146653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  lives: 3
+  maxScore: 256
+  barsBroken: 0
+  isPuckOnWinWall: 0
+  nextLevel: LevelTwo
+  loadLevelDelay: 5
+  loadMainMenuDelay: 3
+  isPlayerDead: 0
+  puckScript: {fileID: 0}
+  barBreak: {fileID: 0}
+  barBreakObject: {fileID: 0}
+  lostLife: {fileID: 0}
+  lostLifeObject: {fileID: 0}
+  gameOver: {fileID: 0}
+  gameOverObject: {fileID: 0}
+  gameWin: {fileID: 0}
+  gameWinObject: {fileID: 0}
+  bGM: {fileID: 0}
+  bGMGameObject: {fileID: 0}
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  startText: {fileID: 0}
+  barContent: {fileID: 0}
+  playerBar: {fileID: 0}
+  gameManagerObject: {fileID: 262146653}
+--- !u!4 &262146656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262146653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &262146657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262146653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 262146655}
+  buttonHoverSFX: {fileID: 1765236569}
+  buttonManagerObject: {fileID: 0}
+  playButton: {fileID: 1904928768}
+  exitButton: {fileID: 1340904842}
+  levelOneButton: {fileID: 0}
+  levelTwoButton: {fileID: 0}
+  levelThreeButton: {fileID: 0}
+  returnButton: {fileID: 0}
+  resumeButton: {fileID: 0}
+  pauseButton: {fileID: 0}
+  restartButton: {fileID: 0}
+  levelSelectButton: {fileID: 0}
+  buttonPressSFXDelay: 0.5
+  buttonHoverSFXDelay: 0.5
 --- !u!1 &330703733
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,65 +541,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330703733}
   m_CullTransparentMesh: 1
---- !u!1 &473084942
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 473084944}
-  - component: {fileID: 473084943}
-  m_Layer: 0
-  m_Name: ButtonManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &473084943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473084942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 1370832476}
-  buttonHoverSFX: {fileID: 1765236569}
-  buttonManagerObject: {fileID: 473084942}
-  playButton: {fileID: 1904928768}
-  exitButton: {fileID: 1340904842}
-  levelOneButton: {fileID: 0}
-  levelTwoButton: {fileID: 0}
-  levelThreeButton: {fileID: 0}
-  returnButton: {fileID: 0}
-  resumeButton: {fileID: 0}
-  pauseButton: {fileID: 0}
-  restartButton: {fileID: 0}
-  levelSelectButton: {fileID: 0}
-  buttonPressSFXDelay: 0.5
-  buttonHoverSFXDelay: 0.5
---- !u!4 &473084944
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473084942}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,57 +1071,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1154494850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1154494852}
-  - component: {fileID: 1154494851}
-  m_Layer: 0
-  m_Name: MainMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1154494851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154494850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e4609caf90b77489fd2e588f79846f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 1370832476}
-  mainMenu:
-    m_Handle: 0
-  highScoreText: {fileID: 1022226906}
-  highScoreObject: {fileID: 1022226904}
-  playButton: {fileID: 1904928766}
-  exitButton: {fileID: 1340904840}
---- !u!4 &1154494852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154494850}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244245107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,9 +1327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 1370832476}
+  gameManagerScript: {fileID: 262146655}
   buttonHoverSFX: {fileID: 1765236569}
-  buttonManagerObject: {fileID: 473084942}
+  buttonManagerObject: {fileID: 0}
   playButton: {fileID: 1904928768}
   exitButton: {fileID: 1340904842}
   levelOneButton: {fileID: 0}
@@ -1354,7 +1361,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -1374,95 +1380,7 @@ MonoBehaviour:
   startText: {fileID: 0}
   barContent: {fileID: 0}
   playerBar: {fileID: 0}
-  gameManagerObject: {fileID: 0}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
---- !u!1 &1370832475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1370832477}
-  - component: {fileID: 1370832476}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1370832476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370832475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d72bdd89e8111224790bf10c17a4e471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  livesText: {fileID: 0}
-  scoreText: {fileID: 0}
-  lives: 0
-  maxScore: 0
-  barsBroken: 0
-  isPuckOnWinWall: 0
-  nextLevel: 
-  mainMenuScene: 
-  loadLevelDelay: 0
-  loadMainMenuDelay: 0
-  isPlayerDead: 0
-  puckScript: {fileID: 0}
-  barBreak: {fileID: 1098774812}
-  barBreakObject: {fileID: 1098774810}
-  lostLife: {fileID: 0}
-  lostLifeObject: {fileID: 0}
-  gameOver: {fileID: 0}
-  gameOverObject: {fileID: 0}
-  gameWin: {fileID: 0}
-  gameWinObject: {fileID: 0}
-  bGM: {fileID: 0}
-  bGMGameObject: {fileID: 0}
-  winText: {fileID: 0}
-  loseText: {fileID: 0}
-  startText: {fileID: 0}
-  barContent: {fileID: 0}
-  playerBar: {fileID: 0}
-  gameManagerObject: {fileID: 1370832475}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
---- !u!4 &1370832477
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370832475}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5699999, z: -8.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  gameManagerObject: {fileID: 262146653}
 --- !u!1 &1562020813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,11 +1694,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1904928771}
         m_TargetAssemblyTypeName: MainMenu_Breakout, Assembly-CSharp
         m_MethodName: LoadLevel
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
@@ -1835,9 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e4609caf90b77489fd2e588f79846f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 1370832476}
-  mainMenu:
-    m_Handle: 0
+  gameManagerScript: {fileID: 262146655}
   highScoreText: {fileID: 1022226906}
   highScoreObject: {fileID: 1022226904}
   playButton: {fileID: 1904928766}
@@ -1854,9 +1770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c22551fc5a7cfb4a9a8158afbda1802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManagerScript: {fileID: 1370832476}
+  gameManagerScript: {fileID: 262146655}
   buttonHoverSFX: {fileID: 1765236569}
-  buttonManagerObject: {fileID: 473084942}
+  buttonManagerObject: {fileID: 0}
   playButton: {fileID: 1904928768}
   exitButton: {fileID: 1340904842}
   levelOneButton: {fileID: 0}
@@ -1888,7 +1804,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -1908,15 +1823,7 @@ MonoBehaviour:
   startText: {fileID: 0}
   barContent: {fileID: 0}
   playerBar: {fileID: 0}
-  gameManagerObject: {fileID: 0}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
+  gameManagerObject: {fileID: 262146653}
 --- !u!1 &2058100907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,8 +2098,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 761381574}
-  - {fileID: 1154494852}
-  - {fileID: 1370832477}
+  - {fileID: 262146656}
   - {fileID: 941215392}
   - {fileID: 157804079}
-  - {fileID: 473084944}

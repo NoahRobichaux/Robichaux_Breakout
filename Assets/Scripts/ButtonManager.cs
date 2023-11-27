@@ -22,7 +22,13 @@ public class ButtonManager : MonoBehaviour
     
     public float buttonPressSFXDelay = 0.5f;
     public float buttonHoverSFXDelay = 0.5f;
-public void ButtonPressSFX(bool play)
+
+    private void Update()
+    {
+        DontDestroyOnLoad(buttonManagerObject);
+    }
+
+    public void ButtonPressSFX(bool play)
     {
         gameManagerScript.barBreakObject.SetActive(true);
         gameManagerScript.barBreak.Play();
@@ -35,7 +41,7 @@ public void ButtonPressSFX(bool play)
             }
         }
     }
-public void ButtonHoverSFX(bool play)
+    public void ButtonHoverSFX(bool play)
     {
         if (playButton.GetComponent<Button>().spriteState.highlightedSprite == true)
         {
@@ -167,14 +173,5 @@ public void ButtonHoverSFX(bool play)
                 }
             }
         }
-    }
-        
-    void OnEnable()
-    {
-        DontDestroyOnLoad(buttonManagerObject);
-    }
-    void OnDisable()
-    {
-        DontDestroyOnLoad(buttonManagerObject);
     }
 }

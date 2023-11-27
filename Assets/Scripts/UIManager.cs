@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     GameObject[] pauseObjects;
 
-    public void Reload(string level)
+    public void Reload(int level)
     {
         SceneManager.LoadScene(level);
     }
@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void LoadLevel(string level)
+    public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
     }

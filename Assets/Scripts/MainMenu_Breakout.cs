@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,25 +8,21 @@ using UnityEngine.UI;
 public class MainMenu_Breakout : MonoBehaviour
 {
     public GameManager gameManagerScript;
-    public Scene mainMenu;
 
     public TMP_Text highScoreText;
     public GameObject highScoreObject;
 
     public GameObject playButton;
     public GameObject exitButton;
-    public struct SaticIntegers
-    {
-        public static int score;
-        public static int highScore;
-    }
+
+    public static int score;
+    public static int highScore;
+
     public void Start()
     {
-        MainMenu_Breakout.SaticIntegers.score = MainMenu_Breakout.SaticIntegers.highScore;
+        score = highScore;
         SaveManager.score = SaveManager.highScore;
-        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-
-        mainMenu = SceneManager.GetSceneByName("MainMenu");
+        score += SaveManager.highScore;
         highScoreObject = GameObject.FindGameObjectWithTag("HighScoreText");
         playButton.gameObject.SetActive(true);
         playButton.gameObject.GetComponent<Button>().interactable = true;
@@ -36,29 +31,22 @@ public class MainMenu_Breakout : MonoBehaviour
     }
     public void Update()
     {
-        if (MainMenu_Breakout.SaticIntegers.score == 0)
+        if (score == 0)
         {
             highScoreText.SetText("No High Score");
         }
-        else if (MainMenu_Breakout.SaticIntegers.highScore > 0)
+        else if (highScore > 0)
         {
-            highScoreText.SetText("High Score: " + MainMenu_Breakout.SaticIntegers.highScore);
-            MainMenu_Breakout.SaticIntegers.score = SaveManager.highScore;
+            highScoreText.SetText("High Score: " + highScore);
+            score = SaveManager.highScore;
+            SaveManager.score = SaveManager.highScore;
+            SaveManager.highScore += score;
         }
     }
-    void OnEnable()
+
+    public static void LoadLevel(int sceneBuildIndex)
     {
-        SaveManager.score = SaveManager.highScore;
-        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-    }
-    void OnDisable()
-    {
-        SaveManager.score = SaveManager.highScore;
-        MainMenu_Breakout.SaticIntegers.score += SaveManager.highScore;
-    }
-    public void LoadLevel(string level)
-    {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(sceneBuildIndex);
     }
 }
 public class MainMenuSaveData : MonoBehaviour

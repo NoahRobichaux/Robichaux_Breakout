@@ -19,8 +19,6 @@ public class GameManager : MonoBehaviour
     
     public string nextLevel;
 
-    public string mainMenuScene;
-
     public float loadLevelDelay = 5f;
 
     public float loadMainMenuDelay = 3f;
@@ -54,11 +52,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameManagerObject;
 
-    public Scene LevelOne;
-    public Scene LevelTwo;
-    public Scene MainMenu;
-    public Scene LevelSelect;
-
     void Start()
     {
         startText.SetActive(true);
@@ -70,13 +63,12 @@ public class GameManager : MonoBehaviour
         maxScore = 256;
         lives = 3;
         barsBroken = 0;
-        LevelOne = SceneManager.GetSceneByName("LevelOne");
-        MainMenu = SceneManager.GetSceneByName("MainMenu");
-        LevelSelect = SceneManager.GetSceneByName("LevelSelect");
     }
 
     void Update()
     {
+        DontDestroyOnLoad(gameManagerObject);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startText.SetActive(false);
@@ -130,42 +122,11 @@ public class GameManager : MonoBehaviour
                 loadMainMenuDelay -= Time.deltaTime;
                 loseText.SetActive(true);
                 gameOverObject.SetActive(true);
-                MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
             }
             if (loadMainMenuDelay <= 0)
             {
-                SceneManager.LoadScene(mainMenuScene);
+                SceneManager.LoadScene(0);
             }
-        }
-    }
-    void OnEnable()
-    {
-        if (LevelOne.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-        }
-        else if (MainMenu.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-        }
-        else if (LevelSelect.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-        }
-    }
-    void OnDisable()
-    {
-        if (LevelOne.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-        }
-        else if (MainMenu.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
-        }
-        else if (LevelSelect.isLoaded == true)
-        {
-            MainMenu_Breakout.SaticIntegers.score += SaveManager.score;
         }
     }
 }
