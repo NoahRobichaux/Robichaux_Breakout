@@ -15,7 +15,7 @@ public class DeathBox : MonoBehaviour
             {
                 gameManagerScript.isPlayerDead = true;
                 gameManagerScript.lostLifeObject.SetActive(true);
-                collision.gameObject.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
+                collision.gameObject.GetComponent<Transform>().localPosition = Puck.puckInitPos;
                 collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             }
         }

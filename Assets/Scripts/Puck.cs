@@ -25,11 +25,15 @@ public class Puck : MonoBehaviour
 
     public float speed;
 
+    public static Vector2 puckInitPos;
+    public static Vector2 playerInitPos;
+
     void Start()
     {
         puckRB = GetComponent<Rigidbody2D>();
         speed = 0.5f;
-        puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
+        puckInitPos = puck.GetComponent<Transform>().localPosition;
+        playerInitPos = gameManagerScript.playerBar.GetComponent<Transform>().position;
         puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
         redBars = GameObject.FindGameObjectsWithTag("RedBars");
         orangeBars = GameObject.FindGameObjectsWithTag("OrangeBars");
@@ -73,9 +77,9 @@ public class Puck : MonoBehaviour
         }
         if (gameManagerScript.lives < 3 && gameManagerScript.lives > 0)
         {
-            puck.GetComponent<Transform>().localPosition = new Vector2(0f, -4.2f);
+            puck.GetComponent<Transform>().localPosition = puckInitPos;
             puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-            gameManagerScript.playerBar.GetComponent<Transform>().localPosition = new Vector2(0, -4.5f);
+            gameManagerScript.playerBar.GetComponent<Transform>().localPosition = playerInitPos;
             if (Input.GetKeyDown(KeyCode.Space) && puck.GetComponent<Rigidbody2D>().constraints == RigidbodyConstraints2D.FreezePosition)
             {
                 puck.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
@@ -84,7 +88,6 @@ public class Puck : MonoBehaviour
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Force);
-
             }
         }
     }
@@ -116,7 +119,7 @@ public class Puck : MonoBehaviour
         {
             if (isPuckGoingUp == true)
             {
-                float x = Random.Range(-10f, 10f);
+                float x = Random.Range(5f, 10f);
                 float y = 10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Force);
@@ -124,7 +127,7 @@ public class Puck : MonoBehaviour
             }
             if (isPuckGoingUp == false)
             {
-                float x = Random.Range(-10f, 10f);
+                float x = Random.Range(5f, 10f);
                 float y = -10f;
                 puckDirection = new Vector2(x, y);
                 puckRB.AddForce(puckDirection, ForceMode2D.Force);
@@ -133,11 +136,12 @@ public class Puck : MonoBehaviour
         }
         if (collision.gameObject.name == "Player_Bar")
         {
-            float x = Random.Range(-10f, 10f);
+            float x = Random.Range(5f, 10f);
             float y = 10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Force);
             gameManagerScript.barBreakObject.SetActive(true);
+            isPuckGoingUp = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -150,7 +154,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenRed = true;
             isPuckGoingUp = false;
-            float x = Random.Range(-10f, 10f);
+            float x = Random.Range(5f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Force);
@@ -164,7 +168,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barBreakObject.SetActive(true);
             hasBrokenOrange = true;
             isPuckGoingUp = false;
-            float x = Random.Range(-10f, 10f);
+            float x = Random.Range(5f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Force);
@@ -177,7 +181,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
-            float x = Random.Range(-10f, 10f);
+            float x = Random.Range(5f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Force);
@@ -190,7 +194,7 @@ public class Puck : MonoBehaviour
             gameManagerScript.barsBroken = gameManagerScript.barsBroken + 1;
             gameManagerScript.barBreakObject.SetActive(true);
             isPuckGoingUp = false;
-            float x = Random.Range(-10f, 10f);
+            float x = Random.Range(5f, 10f);
             float y = -10f;
             puckDirection = new Vector2(x, y);
             puckRB.AddForce(puckDirection, ForceMode2D.Force);

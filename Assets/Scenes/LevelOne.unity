@@ -3037,7 +3037,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: LevelTwo
-  mainMenuScene: MainMenu
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -3058,14 +3057,6 @@ MonoBehaviour:
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
   gameManagerObject: {fileID: 725003279}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
 --- !u!4 &725003281
 Transform:
   m_ObjectHideFlags: 0
@@ -3094,8 +3085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 725003280}
-  mainMenu:
-    m_Handle: 0
   highScoreText: {fileID: 0}
   highScoreObject: {fileID: 0}
   playButton: {fileID: 0}
@@ -3971,7 +3960,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -3992,14 +3980,6 @@ MonoBehaviour:
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
   gameManagerObject: {fileID: 725003279}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
 --- !u!1001 &839745574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4212,8 +4192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManagerScript: {fileID: 725003280}
-  mainMenu:
-    m_Handle: 0
   highScoreText: {fileID: 0}
   highScoreObject: {fileID: 0}
   playButton: {fileID: 0}
@@ -4463,7 +4441,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -4484,14 +4461,6 @@ MonoBehaviour:
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
   gameManagerObject: {fileID: 725003279}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
 --- !u!1001 &940974903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5866,7 +5835,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201304498}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
@@ -5999,7 +5968,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.65
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -6516,7 +6485,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -6537,14 +6505,6 @@ MonoBehaviour:
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
   gameManagerObject: {fileID: 725003279}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
 --- !u!1001 &1260141530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9397,7 +9357,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930818757}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
@@ -10419,7 +10379,6 @@ MonoBehaviour:
   barsBroken: 0
   isPuckOnWinWall: 0
   nextLevel: 
-  mainMenuScene: 
   loadLevelDelay: 5
   loadMainMenuDelay: 3
   isPlayerDead: 0
@@ -10440,14 +10399,6 @@ MonoBehaviour:
   barContent: {fileID: 1520401634}
   playerBar: {fileID: 1209673245}
   gameManagerObject: {fileID: 725003279}
-  LevelOne:
-    m_Handle: 0
-  LevelTwo:
-    m_Handle: 0
-  MainMenu:
-    m_Handle: 0
-  LevelSelect:
-    m_Handle: 0
 --- !u!1001 &2129924763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10616,7 +10567,6 @@ SceneRoots:
   - {fileID: 753431602}
   - {fileID: 2098512381}
   - {fileID: 1571914467}
-  - {fileID: 745561497}
   - {fileID: 725003281}
   - {fileID: 300890633}
   - {fileID: 909189617}
@@ -10626,3 +10576,4 @@ SceneRoots:
   - {fileID: 1656308818}
   - {fileID: 1955446657}
   - {fileID: 1621935935}
+  - {fileID: 745561497}

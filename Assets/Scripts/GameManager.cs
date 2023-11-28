@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         }
         if (isPlayerDead && lives == 3)
         {
-            lives = 0;
+            lives = 2;
             livesText.SetText("Lives: 2");
             lostLifeObject.SetActive(true);
             startText.SetActive(true);
