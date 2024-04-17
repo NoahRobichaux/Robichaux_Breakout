@@ -2,15 +2,12 @@
 
 > ## Final Version
 >
-> - [**WebGL v0.2.4**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.4)
+> - [**WebGL v0.2.3**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.3)
 
 
 ***
 
 > ## Old Versions
-> 
->
-> - [**WebGL v0.2.3**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.3)
 >
 > - [**WebGL v0.2.2**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.2)
 >

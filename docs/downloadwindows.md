@@ -8,7 +8,7 @@
 
 > ## Old Versions
 
->### Version 0.2.x
+> ### Version 0.2.x
 
 > - [**Windows v0.2.5**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.2.5)
 >
@@ -25,7 +25,7 @@
 
 ***
 
->### Version 0.1.x
+> ### Version 0.1.x
 
 > - [**Windows v0.1.1**](https://github.com/NoahRobichaux/Robichaux_Breakout/releases/tag/v0.1.1)
 > 
